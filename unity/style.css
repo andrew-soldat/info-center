@@ -339,6 +339,12 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+.directions__icon img {
+  position: relative;
+  top: 0;
+  -webkit-animation: transform-icon 2s linear infinite;
+          animation: transform-icon 2s linear infinite;
+}
 .directions__title {
   margin: 0px 0px 75px 0px;
   text-align: center;
@@ -347,6 +353,35 @@ h6 {
   line-height: 1.1;
 }
 
+@-webkit-keyframes transform-icon {
+  0% {
+    top: 0;
+  }
+  33% {
+    top: 15px;
+  }
+  66% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes transform-icon {
+  0% {
+    top: 0;
+  }
+  33% {
+    top: 15px;
+  }
+  66% {
+    top: -15px;
+  }
+  100% {
+    top: 0;
+  }
+}
 .footer {
   background-color: #999999;
 }
