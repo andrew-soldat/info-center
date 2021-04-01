@@ -378,6 +378,12 @@ h6 {
 		display: flex;
 		justify-content:center;
 		align-items: center;
+		
+		img {
+			position: relative;
+			top: 0;
+			animation: transform-icon 2s linear infinite;
+		}
 	}
 
    &__title {
@@ -387,6 +393,20 @@ h6 {
       font-weight: 600;
 		line-height: 1.1;
    }
+}
+@keyframes transform-icon {
+	0% {
+		top: 0;
+	}
+	33% {
+		top: 15px;
+	}
+	66% {
+		top: -15px;
+	}
+	100% {
+		top: 0;
+	}
 }
 .footer {
    background-color: #999999;
