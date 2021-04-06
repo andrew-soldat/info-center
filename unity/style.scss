@@ -112,7 +112,7 @@ h6 {
    // }
 
    &:hover {
-      color: #005FD3;
+      color: #005fd3;
    }
 }
 .title {
@@ -174,7 +174,7 @@ h6 {
    }
 
    &__body {
-		text-align: center;
+      text-align: center;
 
       @media (max-width: 900px) {
          justify-content: space-between;
@@ -228,16 +228,16 @@ h6 {
    }
 
    &__logo {
-		margin: 0px 0px 50px 0px;
+      margin: 0px 0px 50px 0px;
       display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 20px;
-		color: #343434;
-		font-weight: 500;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #343434;
+      font-weight: 500;
 
       img {
-			margin: 0px 12px 0px 0px;
+         margin: 0px 12px 0px 0px;
          max-width: 100%;
       }
    }
@@ -313,7 +313,7 @@ h6 {
       rgba(255, 255, 255, 0) 100%
    );
 
-   &__body {
+   &__section {
       width: 100%;
       height: 100%;
       max-width: 1920px;
@@ -321,6 +321,10 @@ h6 {
       position: relative;
       background-size: cover;
       overflow: hidden;
+
+      @media (min-width: 768px) {
+         display: flex;
+      }
    }
 
    &__bg {
@@ -339,12 +343,25 @@ h6 {
       &_3 {
          background: url('./images/03.png') center no-repeat;
       }
+
+      &_4 {
+         background: url('./images/04.png') no-repeat;
+         background-position: 95% 0%;
+         z-index: 1;
+      }
+   }
+
+   &__body {
+      flex: 0 0 100%;
    }
 
    &__content {
-      padding: 125px 0px 270px 0px;
-      width: 100%;
-      max-width: 660px;
+      margin: 0px 35px 0px 0px;
+      padding: 70px 0px 315px 0px;
+      // width: 100%;
+      // width: 660px;
+      width: 50%;
+      max-width: 605px;
       position: relative;
       z-index: 2;
    }
@@ -358,55 +375,89 @@ h6 {
 
    &__title {
       margin: 0px 0px 35px 0px;
-      font-size: 88px;
-		line-height: 1.1;
+      font-size: 80px;
+      line-height: 1.1;
       font-weight: 700;
       color: #343434;
    }
 
    &__text {
       font-size: 22px;
-		line-height: 137%;
+      line-height: 137%;
+   }
+
+   &__image {
+      @media (min-width: 768px) {
+         padding: 20px 50px 0px 0px;
+         flex: 0 0 50%;
+         transform: translateX(-100%);
+      }
+
+      img {
+         position: relative;
+         z-index: 2;
+         max-width: 100%;
+         height: auto;
+      }
    }
 }
 .directions {
+   background-color: #ebf4ff;
+   padding: 50px 0;
+
    &__body {
    }
 
-	&__icon {
-		margin: 0px 0px 15px 0px;
-		display: flex;
-		justify-content:center;
-		align-items: center;
-		
-		img {
-			position: relative;
-			top: 0;
-			animation: transform-icon 2s linear infinite;
-		}
-	}
+   &__icon {
+      margin: 0px 0px 15px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         position: relative;
+         top: 0;
+         animation: transform-icon 2s linear infinite;
+      }
+   }
 
    &__title {
-		margin: 0px 0px 75px 0px;
+      margin: 0px 0px 75px 0px;
       text-align: center;
       font-size: 32px;
       font-weight: 600;
-		line-height: 1.1;
+      line-height: 1.1;
+
+      span {
+         position: relative;
+			z-index: 5;
+
+         &:before {
+            content: '';
+            width: 100%;
+            height: 11px;
+            background-color: #b7d7ff;
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+				z-index: -1;
+         }
+      }
    }
 }
 @keyframes transform-icon {
-	0% {
-		top: 0;
-	}
-	33% {
-		top: 15px;
-	}
-	66% {
-		top: -15px;
-	}
-	100% {
-		top: 0;
-	}
+   0% {
+      top: 0;
+   }
+   33% {
+      top: 15px;
+   }
+   66% {
+      top: -15px;
+   }
+   100% {
+      top: 0;
+   }
 }
 .footer {
    background-color: #999999;
@@ -459,5 +510,35 @@ h6 {
       @media (max-width: 565px) {
          font-size: 20px;
       }
+   }
+}
+.number {
+   display: flex;
+   justify-content: space-around;
+
+   &__item {
+      text-align: center;
+   }
+
+   &__content {
+      margin: 0px 0px 50px 0px;
+      width: 230px;
+      height: 230px;
+      border: 4px solid #93c1f9;
+      border-radius: 50%;
+      font-size: 80px;
+      color: #2b8aff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__text {
+      width: 200px;
+      font-size: 22px;
+      color: #2b8aff;
+      line-height: 1.5;
+      font-weight: 700;
+      text-transform: uppercase;
    }
 }
