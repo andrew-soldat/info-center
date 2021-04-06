@@ -105,7 +105,7 @@ h6 {
   position: relative;
 }
 .link:hover {
-  color: #005FD3;
+  color: #005fd3;
 }
 
 .title {
@@ -285,7 +285,7 @@ h6 {
   padding: 210px 0px 0px 0px;
   background: linear-gradient(180deg, #b7d7ff 0%, rgba(181, 214, 255, 0.489583) 51.04%, rgba(255, 255, 255, 0) 100%);
 }
-.main__body {
+.main__section {
   width: 100%;
   height: 100%;
   max-width: 1920px;
@@ -293,6 +293,11 @@ h6 {
   position: relative;
   background-size: cover;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .main__section {
+    display: flex;
+  }
 }
 .main__bg {
   width: 100%;
@@ -308,10 +313,19 @@ h6 {
 .main__bg_3 {
   background: url("./images/03.png") center no-repeat;
 }
+.main__bg_4 {
+  background: url("./images/04.png") no-repeat;
+  background-position: 95% 0%;
+  z-index: 1;
+}
+.main__body {
+  flex: 0 0 100%;
+}
 .main__content {
-  padding: 125px 0px 270px 0px;
-  width: 100%;
-  max-width: 660px;
+  margin: 0px 35px 0px 0px;
+  padding: 70px 0px 315px 0px;
+  width: 50%;
+  max-width: 605px;
   position: relative;
   z-index: 2;
 }
@@ -323,7 +337,7 @@ h6 {
 }
 .main__title {
   margin: 0px 0px 35px 0px;
-  font-size: 88px;
+  font-size: 80px;
   line-height: 1.1;
   font-weight: 700;
   color: #343434;
@@ -332,7 +346,24 @@ h6 {
   font-size: 22px;
   line-height: 137%;
 }
+@media (min-width: 768px) {
+  .main__image {
+    padding: 20px 50px 0px 0px;
+    flex: 0 0 50%;
+    transform: translateX(-100%);
+  }
+}
+.main__image img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+}
 
+.directions {
+  background-color: #ebf4ff;
+  padding: 50px 0;
+}
 .directions__icon {
   margin: 0px 0px 15px 0px;
   display: flex;
@@ -351,6 +382,20 @@ h6 {
   font-size: 32px;
   font-weight: 600;
   line-height: 1.1;
+}
+.directions__title span {
+  position: relative;
+  z-index: 5;
+}
+.directions__title span:before {
+  content: "";
+  width: 100%;
+  height: 11px;
+  background-color: #b7d7ff;
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  z-index: -1;
 }
 
 @-webkit-keyframes transform-icon {
@@ -430,4 +475,32 @@ h6 {
   .footer__link {
     font-size: 20px;
   }
+}
+
+.number {
+  display: flex;
+  justify-content: space-around;
+}
+.number__item {
+  text-align: center;
+}
+.number__content {
+  margin: 0px 0px 50px 0px;
+  width: 230px;
+  height: 230px;
+  border: 4px solid #93c1f9;
+  border-radius: 50%;
+  font-size: 80px;
+  color: #2b8aff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.number__text {
+  width: 200px;
+  font-size: 22px;
+  color: #2b8aff;
+  line-height: 1.5;
+  font-weight: 700;
+  text-transform: uppercase;
 }
