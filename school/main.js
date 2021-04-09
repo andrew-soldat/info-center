@@ -71,3 +71,17 @@ $(function () {
 		]
 	});
 });
+
+const accordions = document.querySelectorAll(".accordion__top");
+
+accordions.forEach(item => {
+	item.addEventListener('click', function () {
+		item.classList.toggle('active');
+		var panel = item.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	})
+})

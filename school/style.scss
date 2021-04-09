@@ -601,6 +601,7 @@ main {
    }
 }
 .learning {
+   margin: 0px 0px 80px 0px;
    &__body {
    }
 
@@ -614,7 +615,7 @@ main {
 
    &__column {
       flex: 0 1 33.3333%;
-      padding: 0px 20px 40px 20px;
+      padding: 45px 20px 40px 20px;
 
       &:nth-child(2) {
          .item-learning__item {
@@ -622,11 +623,10 @@ main {
             color: #f5f5f5;
          }
 
-			.item-learning__count {
-				background-color: #e5e5e5;
-				color: #337ed8;
-			}
-
+         .item-learning__count {
+            background-color: #e5e5e5;
+            color: #337ed8;
+         }
       }
 
       @media (max-width: 991px) {
@@ -638,7 +638,7 @@ main {
       }
 
       @media (max-width: 565px) {
-         padding: 0px 20px 20px 20px;
+         padding: 45px 20px 20px 20px;
       }
    }
 
@@ -660,21 +660,21 @@ main {
       width: 99px;
       height: 99px;
       background-color: #337ed8;
-		border-radius: 50px;
-		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      border-radius: 50px;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
       color: #f5f5f5;
-		font-size: 36px;
-		font-weight: 500;
-		display: flex;
-		justify-content:center;
-		align-items: center;
-		position: absolute;
-		top: -45px;
-		right: 30px;
+      font-size: 36px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -45px;
+      right: 30px;
    }
 
    &__title {
-		width: 310px;
+      width: 310px;
       flex: 1 1 auto;
    }
 
@@ -688,9 +688,317 @@ main {
       }
    }
 }
-.title {
+.capabilities {
+   margin: 0px 0px 80px 0px;
+
+   &__body {
+   }
+
+   &__heading {
+   }
+
+   &__content {
+   }
+}
+.item-capabilities {
+   margin: 0 -20px;
+   display: flex;
+   flex-wrap: wrap;
+
+   &__column {
+      flex: 0 1 50%;
+      padding: 0px 20px 0px 20px;
+
+      @media (max-width: 991px) {
+         flex: 1 1 100%;
+      }
+   }
+
+   &__item {
+   }
+
+   &__text {
+      font-size: 24px;
+      padding: 0px 80px 40px 80px;
+      background: url('./images/check.svg') left top no-repeat;
+
+      @media (max-width: 768px) {
+         padding: 0px 40px 40px 80px;
+      }
+   }
+}
+.program {
+	margin: 0px 0px 120px 0px;
+   &__body {
+   }
+
+   &__heading {
+   }
+
+   &__text {
+		margin: 0px 0px 40px 0px;
+   }
+}
+.accordion {
+   border-bottom: 2px solid #353535;
+
+   &:first-child {
+      border-top: 2px solid #353535;
+   }
+
+   &__top {
+      position: relative;
+		padding: 30px;
+		cursor: pointer;
+		transition: all 0.3s ease 0s;
+
+      &:before {
+         content: '';
+         background: url('../img') 0 0 no-repeat;
+         width: 15px;
+         height: 15px;
+         border-top: 5px solid #555555;
+         border-right: 5px solid #555555;
+			position: absolute;
+			top: 50%;
+			right: 9%;
+			transform: translateY(-50%) rotate(45deg);
+			transition: all 0.3s ease 0s;
+      }
+
+		&:hover {
+			&:before {
+				border-color: #61A9FF;
+			}
+
+			color: #61A9FF;
+		}
+	
+		&.active {
+			&:before {
+				transform: rotate(135deg);
+			}
+		}
+   }
+
+   &__lesson {
+      font-weight: 600;
+   }
+
+   &__title {
+      width: 100%;
+      max-width: 930px;
+   }
+
+   &__bottom {
+      max-height: 0;
+		overflow: hidden;
+		transition: all 0.3s ease 0s;
+   }
+	
+	&__list {
+		padding: 0 30px 30px 50px;
+	}
+
+   &__item {
+		list-style-type: disc;
+      margin: 0px 0px 20px 0px;
+
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+   }
+
+	&__text {
+		padding: 30px;
+	}
+}
+.teacher {
+	margin: 0px 0px 120px 0px;
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__content {
+	}
+
+	&__heading {
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 505px;
+	}
+
+	&__name {
+		padding: 0px 0px 20px 0px;
+		margin: 0px 0px 20px 0px;
+		font-size: 36px;
+		border-bottom: 2px solid #337ED8;
+	}
+
+	&__text {
+		p {
+			margin: 0px 0px 30px 0px;
+
+			&:last-child {
+				margin: 0px 0px 0px 0px;
+			}
+		}
+	}
+
+	&__image {
+	}
+}
+.submit {
+	margin: 0px 0px 120px 0px;
+	padding: 40px 0;
+	background-color: #88BBE6;
+	border-radius: 23px;
+	// display: flex;
+	// align-items: center;
+	position: relative;
+	height: 590px;
+
+	&__section {
+		background-color: #F5F5F5;
+		border-radius: 23px;
+		padding: 40px 0;
+		// flex: 0 0 70%;
+		width: 70%;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
+
+	&__body {
+		width: 100%;
+		max-width: 680px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin: 0px 0px 15px 0px;
+		font-weight: 500;
+	}
+
+	&__subtitle {
+		font-weight: 500;
+		color: #007DEA;
+		margin: 0px 0px 30px 0px;
+	}
+}
+.price {
+	padding: 74px 74px 74px 0;
+	background-color: #337ED8;
+	border-radius: 0 23px 23px 0;
+	width: 45%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
+
+	&__block {
+		width: 250px;
+	}
+
+	&__name {
+		font-size: 30px;
+		color: #F5F5F5;
+	}
+
+	&__cost {
+		font-size: 30px;
+		color: #EEEBF2;
+	}
 }
 
+.form {
+	width: 100%;
+	max-width: 440px;
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__line {
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__text-error {
+		display: none;
+		margin: 5px 0px 0px 0px;
+		font-size: 14px;
+		color: red;
+	}
+
+	&__input {
+		padding: 0 18px;
+		width: 100%;
+		height: 54px;
+		font-size: 18px;
+		line-height: 54px;
+		color: #353535;
+		background-color: transparent;
+		border: 2px solid #337ED8;
+		border-radius: 23px;
+		transition: all 0.3s ease 0s;
+
+		&_small {
+			width: 100%;
+			max-width: 215px;
+		}
+
+		&:focus {
+			border-color: #61A9FF;
+		}
+
+		&._error {
+			box-shadow: 0 0 2px red;
+			border-color: rgb(245, 68, 68);
+		}
+	}
+
+	&__button {
+		margin: 0px 0px 15px 0px;
+		width: 100%;
+		height: 54px;
+		font-size: 18px;
+		line-height: 54px;
+		color: #F5F5F5;
+		background-color: #337ED8;
+		border-radius: 23px;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: #61A9FF;
+		}  
+	}
+
+	&__text {
+		font-size: 13px;
+		color: #555;
+	}
+}
+.form__line._error .form__checkbox-label {
+	box-shadow: 0 0 2px red;
+	border-color: rgb(245, 68, 68);
+}
+.form__line._error > .form__text-error {
+	display: block;
+}
+.questions {
+	margin: 0px 0px 120px 0px;
+}
 .footer {
    background-color: #e5e5e5;
 
