@@ -123,11 +123,13 @@ main {
 }
 .header {
    background-color: transparent;
+	padding: 10px 0;
    position: absolute;
-   top: 30px;
+   top: 0px;
    left: 0;
    width: 100%;
    z-index: 5;
+	box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
    transition: all 0.3s ease 0s;
 
    &__logo {
@@ -135,8 +137,8 @@ main {
       align-items: center;
 
       img {
-         width: 80px;
-         height: 80px;
+         width: 60px;
+         height: 60px;
          margin: 0px 16px 0px 0px;
       }
    }
@@ -147,8 +149,6 @@ main {
    }
 
    @media (max-width: 565px) {
-      top: 20px;
-
       &__logo {
          img {
             width: 58px;
@@ -159,7 +159,11 @@ main {
    }
 }
 .main {
-   padding: 110px 0px 110px 0px;
+   padding: 140px 0px 110px 0px;
+
+	@media (max-width: 991px) {
+		padding: 120px 0px 90px 0px;
+	}
 
    @media (max-width: 565px) {
       padding: 100px 0px 60px 0px;
@@ -357,7 +361,7 @@ main {
 		}
 
       &_left {
-         flex: 0 1 32%;
+         flex: 0 1 31%;
          justify-content: flex-start;
 
          @media (max-width: 850px) {
@@ -370,7 +374,7 @@ main {
       }
 
       &_center {
-         flex: 0 1 36%;
+         flex: 0 1 38%;
          justify-content: center;
          border-right: 4px solid #f8f7f7;
          border-left: 4px solid #f8f7f7;
@@ -386,7 +390,7 @@ main {
 			}
       }
       &_right {
-         flex: 0 1 32%;
+         flex: 0 1 31%;
          justify-content: flex-end;
 
          @media (max-width: 850px) {
@@ -448,7 +452,7 @@ main {
 
    &__name {
       padding: 0px 0px 0px 28px;
-      background: url('./images/copyright.svg') left 7px no-repeat;
+      background: url('./images/copyright.svg') left 3px no-repeat;
    }
 
    &__button {
