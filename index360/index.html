@@ -9,6 +9,7 @@
          rel="stylesheet"
       />
       <link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
       <title>Индекс 360</title>
    </head>
    <body>
@@ -16,8 +17,9 @@
          <div class="container">
             <a href="https://info-center.by" class="header__logo">
                <img src="./images/logo.svg" alt="Логотип" />
-               <div class="header__text text">
-                  РУП “Информационно-издательский центр по налогам и сборам”
+               <div class="header__text">
+                  Республиканское унитарное предприятие
+                  «Информационно-издательский центр по налогам и сборам»
                </div>
             </a>
          </div>
@@ -51,11 +53,11 @@
             <div class="container">
                <div class="chart__body">
                   <h2 class="chart__title title">
-                     Сводный индекс активности розницы (товары, работы, услуги)
+							Доля продаж безналичным способом оплаты, %
                   </h2>
                   <div class="chart__row">
                      <div class="chart__chart">
-                        <img src="./images/chart1.png" alt="" />
+                        <canvas id="myChart"></canvas>
                      </div>
                      <div class="chart__content">
                         <div class="chart__text">
@@ -156,8 +158,8 @@
             </div>
          </div>
       </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- <script src="./chart.min.js"></script> -->
+		
       <script src="./main.js"></script>
    </body>
 </html>
