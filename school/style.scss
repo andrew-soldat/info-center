@@ -84,7 +84,7 @@ main {
 }
 .container {
    width: 100%;
-   max-width: 1440px;
+   max-width: 1140px;
    margin: 0 auto;
    padding: 0 20px;
 }
@@ -610,7 +610,7 @@ main {
 }
 .item-learning {
    display: flex;
-   flex-wrap: wrap;
+   // flex-wrap: wrap;
    margin: 0 -20px;
 
    &__column {
