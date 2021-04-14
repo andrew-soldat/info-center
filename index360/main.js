@@ -309,8 +309,8 @@ const config = {
       datasets: [
          {
             label: 'Доля продаж безналичным способом оплаты, %',
-            backgroundColor: 'blue',
-            borderColor: 'blue',
+            backgroundColor: '#060753',
+            borderColor: '#060753',
             data: [44.22,
 					47.17,
 					48.60,

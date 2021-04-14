@@ -252,23 +252,20 @@ h6 {
       align-items: center;
 
 		@media (max-width: 1100px) {
-			flex-direction: column;
+			// flex-direction: column;
+			display: block;
 		}
    }
 
    &__chart {
       flex: 0 0 800px;
 
-		#idMyChart {
-			width: 100%;
-		}
-
 		@media (max-width: 1100px) {
 			margin: 0px 0px 40px 0px;
-			flex: 1 1 auto;
+			// flex: 1 1 auto;
+			background-color: #ececec;
 			width: 800px;
-			overflow: scroll;
-			// overflow: auto;
+			overflow-x: auto;
 
 			&_bottom {
 				order: -1;
@@ -278,10 +275,6 @@ h6 {
 		@media (max-width: 565px) {
 			margin: 0px 0px 20px 0px;
 		}
-
-      img {
-         max-width: 100%;
-      }
    }
 
    &__content {
