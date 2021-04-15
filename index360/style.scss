@@ -113,7 +113,7 @@ h6 {
    color: #434450;
 
    @media (max-width: 565px) {
-      font-size: 13px;
+      font-size: 14px;
    }
 }
 .header {
@@ -211,12 +211,9 @@ h6 {
 
    &__text {
       margin: 0px 0px 35px 0px;
-      font-size: 22px;
-      font-weight: 300;
 
       // @media (max-width: 565px) {
 		// 	margin: 0px 0px 15px 0px;
-      //    font-size: 13px;
       // }
    }
 
@@ -289,21 +286,16 @@ h6 {
    }
 
    &__text {
-      font-size: 16px;
-      font-weight: 300;
-
-      @media (max-width: 565px) {
-         font-size: 13px;
-      }
    }
 
    &__indicators {
       margin: 15px 0px 0px 0px;
       display: flex;
 		align-items: center;
-      font-size: 13px;
-      font-weight: 300;
-
+		font-size: 14px;
+		color: #434450;
+		font-weight: 300;
+		
       @media (max-width: 565px) {
          font-size: 13px;
 			line-height: 1.2;

@@ -130,7 +130,7 @@ h6 {
 }
 @media (max-width: 565px) {
   .text {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 
@@ -193,8 +193,6 @@ h6 {
 }
 .main__text {
   margin: 0px 0px 35px 0px;
-  font-size: 22px;
-  font-weight: 300;
 }
 .main__image img {
   max-width: 100%;
@@ -255,20 +253,12 @@ h6 {
     margin: 0;
   }
 }
-.chart__text {
-  font-size: 16px;
-  font-weight: 300;
-}
-@media (max-width: 565px) {
-  .chart__text {
-    font-size: 13px;
-  }
-}
 .chart__indicators {
   margin: 15px 0px 0px 0px;
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
+  color: #434450;
   font-weight: 300;
 }
 @media (max-width: 565px) {
