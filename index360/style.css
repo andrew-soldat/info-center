@@ -113,7 +113,8 @@ h6 {
 
 .title {
   margin: 0px 0px 30px 0px;
-  font-size: 24 px;
+  font-size: 24px;
+  color: #263238;
   font-weight: 600;
 }
 @media (max-width: 565px) {
