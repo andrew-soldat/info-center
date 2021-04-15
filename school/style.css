@@ -658,7 +658,7 @@ main {
   transition: all 0.3s ease 0s;
 }
 .accordion__list {
-  padding: 0 30px 30px 50px;
+  padding: 0 30px 30px 60px;
 }
 .accordion__item {
   list-style-type: disc;
@@ -668,7 +668,7 @@ main {
   margin: 0px 0px 0px 0px;
 }
 .accordion__text {
-  padding: 30px;
+  padding: 0 30px 30px;
 }
 
 .teacher {
