@@ -78,7 +78,7 @@ h6 {
 }
 .container {
    width: 100%;
-   max-width: 1100px;
+   max-width: 1270px;
    margin: 0 auto;
    padding: 0 20px;
 }
@@ -98,8 +98,8 @@ h6 {
    }
 }
 .title {
-   margin: 0px 0px 40px 0px;
-   font-size: 26px;
+   margin: 0px 0px 30px 0px;
+   font-size: 24 px;
    font-weight: 600;
 
    @media (max-width: 565px) {
@@ -112,12 +112,12 @@ h6 {
    color: #434450;
 
    @media (max-width: 565px) {
-      font-size: 14px;
+      font-size: 13px;
    }
 }
 .header {
    background-color: transparent;
-	padding: 10px 0;
+	padding: 30px 0;
    position: absolute;
    top: 0px;
    left: 0;
@@ -137,9 +137,9 @@ h6 {
    }
 	
    &__text {
-		margin: 0px 0px 0px 20px;
+		margin: 0px 0px 0px 35px;
 		width: 100%;
-      max-width: 290px;
+      max-width: 415px;
 		font-size: 14px;
 		color: #434450;
 
@@ -152,49 +152,49 @@ h6 {
    }
 }
 .main {
-   padding: 100px 0px 30px 0px;
+   padding: 160px 0px 60px 0px;
 
-	@media (max-width: 991px) {
-		padding: 120px 0px 90px 0px;
-	}
+	// @media (max-width: 991px) {
+	// 	padding: 120px 0px 90px 0px;
+	// }
 
-   @media (max-width: 565px) {
-      padding: 100px 0px 60px 0px;
-   }
+   // @media (max-width: 565px) {
+   //    padding: 100px 0px 60px 0px;
+   // }
 
    &__body {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      @media (max-width: 991px) {
-         flex-direction: column;
-			justify-content: center;
-      }
+      // @media (max-width: 991px) {
+      //    flex-direction: column;
+		// 	justify-content: center;
+      // }
    }
 
    &__content {
       flex: 0 0 469px;
       padding: 50px 0;
 
-      @media (max-width: 991px) {
-			flex: 0 1 100%;
-         padding: 50px 0 0px;
-      }
+      // @media (max-width: 991px) {
+		// 	flex: 0 1 100%;
+      //    padding: 50px 0 0px;
+      // }
 
-      @media (max-width: 565px) {
-         padding: 0px 0 15px;
-      }
+      // @media (max-width: 565px) {
+      //    padding: 0px 0 15px;
+      // }
    }
 
    &__subtitle {
-      margin: 0px 0px 20px 0px;
-      font-size: 26px;
+      margin: 0px 0px 15px 0px;
+      font-size: 24px;
       font-weight: 700;
 
-      @media (max-width: 565px) {
-         font-size: 18px;
-      }
+      // @media (max-width: 565px) {
+      //    font-size: 18px;
+      // }
    }
 
    &__title {
@@ -203,26 +203,26 @@ h6 {
       font-size: 60px;
       font-weight: 900;
 
-      @media (max-width: 565px) {
-         font-size: 43px;
-      }
+      // @media (max-width: 565px) {
+      //    font-size: 43px;
+      // }
    }
 
    &__text {
-      margin: 0px 0px 55px 0px;
-      font-size: 26px;
+      margin: 0px 0px 35px 0px;
+      font-size: 22px;
       font-weight: 300;
 
-      @media (max-width: 565px) {
-			margin: 0px 0px 15px 0px;
-         font-size: 13px;
-      }
+      // @media (max-width: 565px) {
+		// 	margin: 0px 0px 15px 0px;
+      //    font-size: 13px;
+      // }
    }
 
    &__button {
-      @media (max-width: 991px) {
-         margin: 20px 0px 0px 0px;
-      }
+      // @media (max-width: 991px) {
+      //    margin: 20px 0px 0px 0px;
+      // }
    }
 
    &__image {
@@ -232,7 +232,7 @@ h6 {
    }
 }
 .chart {
-   padding: 80px 0;
+   padding: 60px 0;
 	
 	&_gray {
 		background-color: #ececec;
@@ -246,10 +246,11 @@ h6 {
       padding: 20px 0;
    }
 
-   &__row {
+   &__body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+		color: blue;    
 
 		@media (max-width: 1100px) {
 			// flex-direction: column;
@@ -258,7 +259,7 @@ h6 {
    }
 
    &__chart {
-      flex: 0 0 800px;
+      flex: 0 0 850px;
 
 		@media (max-width: 1100px) {
 			margin: 0px 0px 40px 0px;
@@ -278,7 +279,7 @@ h6 {
    }
 
    &__content {
-      flex: 0 0 240px;
+      flex: 0 1 350px;
 
 		@media (max-width: 1100px) {
 			flex: 0 1 100%;
@@ -314,11 +315,11 @@ h6 {
 	}
 }
 .indicators {
-   padding: 75px 0 65px;
+   padding: 60px 0 60px;
    background-color: #ececec;
 
 	@media (max-width: 768px) {
-      padding: 50px 0;
+      padding: 30px 0;
    }
 
 	@media (max-width: 565px) {
@@ -334,7 +335,6 @@ h6 {
    }
 
    &__column {
-      padding: 25px 0;
       display: flex;
       align-items: center;
 
@@ -392,9 +392,9 @@ h6 {
    }
 
    &__icon {
-      margin: 0px 15px 0px 0px;
-		width: 87px;
-		height: 87px;
+      margin: 0px 20px 0px 0px;
+		width: 130px;
+		height: 130px;
 
       img {
          max-width: 100%;
@@ -406,7 +406,7 @@ h6 {
    }
 
    &__number {
-      font-size: 54px;
+      font-size: 80px;
       font-weight: 700;
 
       @media (max-width: 565px) {
@@ -415,7 +415,7 @@ h6 {
    }
 
    &__text {
-      font: 16px;
+      font: 24px;
       color: #263238;
    }
 }
@@ -437,10 +437,30 @@ h6 {
       }
    }
 
-   &__name {
-      padding: 0px 0px 0px 28px;
-      background: url('./images/copyright.svg') left 3px no-repeat;
+   &__logo {
+      display: flex;
+      align-items: center;
+
+      img {
+         width: 60px;
+         height: 60px;
+      }
    }
+	
+   &__text {
+		margin: 0px 0px 0px 35px;
+		width: 100%;
+      max-width: 530px;
+		font-size: 16px;
+		color: #434450;
+
+
+		@media (max-width: 565px) {
+			margin: 0px 0px 0px 10px;
+			max-width: 240px;
+			font-size: 10px;
+		}
+	}
 
    &__button {
       margin: 0px 0px 0px 30px;

@@ -91,7 +91,7 @@ h6 {
 
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1270px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -112,8 +112,8 @@ h6 {
 }
 
 .title {
-  margin: 0px 0px 40px 0px;
-  font-size: 26px;
+  margin: 0px 0px 30px 0px;
+  font-size: 24 px;
   font-weight: 600;
 }
 @media (max-width: 565px) {
@@ -129,13 +129,13 @@ h6 {
 }
 @media (max-width: 565px) {
   .text {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 .header {
   background-color: transparent;
-  padding: 10px 0;
+  padding: 30px 0;
   position: absolute;
   top: 0px;
   left: 0;
@@ -153,9 +153,9 @@ h6 {
   height: 60px;
 }
 .header__text {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 35px;
   width: 100%;
-  max-width: 290px;
+  max-width: 415px;
   font-size: 14px;
   color: #434450;
 }
@@ -168,53 +168,21 @@ h6 {
 }
 
 .main {
-  padding: 100px 0px 30px 0px;
-}
-@media (max-width: 991px) {
-  .main {
-    padding: 120px 0px 90px 0px;
-  }
-}
-@media (max-width: 565px) {
-  .main {
-    padding: 100px 0px 60px 0px;
-  }
+  padding: 160px 0px 60px 0px;
 }
 .main__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 991px) {
-  .main__body {
-    flex-direction: column;
-    justify-content: center;
-  }
-}
 .main__content {
   flex: 0 0 469px;
   padding: 50px 0;
 }
-@media (max-width: 991px) {
-  .main__content {
-    flex: 0 1 100%;
-    padding: 50px 0 0px;
-  }
-}
-@media (max-width: 565px) {
-  .main__content {
-    padding: 0px 0 15px;
-  }
-}
 .main__subtitle {
-  margin: 0px 0px 20px 0px;
-  font-size: 26px;
+  margin: 0px 0px 15px 0px;
+  font-size: 24px;
   font-weight: 700;
-}
-@media (max-width: 565px) {
-  .main__subtitle {
-    font-size: 18px;
-  }
 }
 .main__title {
   margin: 0px 0px 25px 0px;
@@ -222,33 +190,17 @@ h6 {
   font-size: 60px;
   font-weight: 900;
 }
-@media (max-width: 565px) {
-  .main__title {
-    font-size: 43px;
-  }
-}
 .main__text {
-  margin: 0px 0px 55px 0px;
-  font-size: 26px;
+  margin: 0px 0px 35px 0px;
+  font-size: 22px;
   font-weight: 300;
-}
-@media (max-width: 565px) {
-  .main__text {
-    margin: 0px 0px 15px 0px;
-    font-size: 13px;
-  }
-}
-@media (max-width: 991px) {
-  .main__button {
-    margin: 20px 0px 0px 0px;
-  }
 }
 .main__image img {
   max-width: 100%;
 }
 
 .chart {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 .chart_gray {
   background-color: #ececec;
@@ -263,18 +215,19 @@ h6 {
     padding: 20px 0;
   }
 }
-.chart__row {
+.chart__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: blue;
 }
 @media (max-width: 1100px) {
-  .chart__row {
+  .chart__body {
     display: block;
   }
 }
 .chart__chart {
-  flex: 0 0 800px;
+  flex: 0 0 850px;
 }
 @media (max-width: 1100px) {
   .chart__chart {
@@ -293,7 +246,7 @@ h6 {
   }
 }
 .chart__content {
-  flex: 0 0 240px;
+  flex: 0 1 350px;
 }
 @media (max-width: 1100px) {
   .chart__content {
@@ -329,12 +282,12 @@ h6 {
 }
 
 .indicators {
-  padding: 75px 0 65px;
+  padding: 60px 0 60px;
   background-color: #ececec;
 }
 @media (max-width: 768px) {
   .indicators {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 }
 @media (max-width: 565px) {
@@ -351,7 +304,6 @@ h6 {
   }
 }
 .indicators__column {
-  padding: 25px 0;
   display: flex;
   align-items: center;
 }
@@ -414,9 +366,9 @@ h6 {
   }
 }
 .indicators__icon {
-  margin: 0px 15px 0px 0px;
-  width: 87px;
-  height: 87px;
+  margin: 0px 20px 0px 0px;
+  width: 130px;
+  height: 130px;
 }
 .indicators__icon img {
   max-width: 100%;
@@ -425,7 +377,7 @@ h6 {
   text-align: center;
 }
 .indicators__number {
-  font-size: 54px;
+  font-size: 80px;
   font-weight: 700;
 }
 @media (max-width: 565px) {
@@ -434,7 +386,7 @@ h6 {
   }
 }
 .indicators__text {
-  font: 16px;
+  font: 24px;
   color: #263238;
 }
 
@@ -457,9 +409,27 @@ h6 {
     flex-direction: column;
   }
 }
-.footer__name {
-  padding: 0px 0px 0px 28px;
-  background: url("./images/copyright.svg") left 3px no-repeat;
+.footer__logo {
+  display: flex;
+  align-items: center;
+}
+.footer__logo img {
+  width: 60px;
+  height: 60px;
+}
+.footer__text {
+  margin: 0px 0px 0px 35px;
+  width: 100%;
+  max-width: 530px;
+  font-size: 16px;
+  color: #434450;
+}
+@media (max-width: 565px) {
+  .footer__text {
+    margin: 0px 0px 0px 10px;
+    max-width: 240px;
+    font-size: 10px;
+  }
 }
 .footer__button {
   margin: 0px 0px 0px 30px;

@@ -9,14 +9,13 @@
          rel="stylesheet"
       />
       <link rel="stylesheet" href="style.css" />
-		<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script> -->
       <title>Индекс 360</title>
    </head>
    <body>
       <header class="header">
          <div class="container">
             <a href="https://info-center.by" class="header__logo">
-               <img src="./images/logo.svg" alt="Логотип" />
+               <img src="./images/logo.png" alt="Логотип" />
                <div class="header__text">
                   Республиканское унитарное предприятие
                   «Информационно-издательский центр по налогам и сборам»
@@ -31,7 +30,7 @@
                   <div class="main__content">
                      <div class="main__subtitle">Специальный проект</div>
                      <h1 class="main__title">Индекс 360&deg;</h1>
-                     <div class="main__text">
+                     <div class="main__text text">
                         Еженедельная информация о потребительской активности на
                         базе агрегированных и обезличенных данных, поступающих
                         от кассового оборудования
@@ -52,40 +51,40 @@
          <section class="chart chart_gray">
             <div class="container">
                <div class="chart__body">
-                  <h2 class="chart__title title">
-							Доля продаж безналичным способом оплаты, %
-                  </h2>
-                  <div class="chart__row">
-                     <div class="chart__chart">
-                        <!-- <canvas id="myChart"></canvas> -->
+						<div class="chart__chart">
+							<h2 class="chart__title title">
+								Сводный индекс активности розницы (товары, работы, услуги)
+							</h2>
+                     <canvas id="myChart1"></canvas>
+                  </div>
+                  <div class="chart__content">
+                     <div class="chart__text text">
+                        Отражает изменение активности розницы в сравнении с
+                        аналогичным периодом прошлого года. Плюсовые значения
+                        свидетельствуют о том, что в текущем периоде общая
+                        выручка в рознице (количество чеков) выше, чем за
+                        аналогичный период предыдущего года.
                      </div>
-                     <div class="chart__content">
-                        <div class="chart__text">
-                           Отражает изменение активности розницы в сравнении с
-                           аналогичным периодом прошлого года. Плюсовые значения
-                           свидетельствуют о том, что в текущем периоде общая
-                           выручка в рознице (количество чеков) выше, чем за
-                           аналогичный период предыдущего года.
+                     <div class="chart__indicators">
+                        <img
+                           class="chart__icon"
+                           src="./images/arrow1.svg"
+                           alt="стрелка вниз"
+                        />
+                        <div class="chart__info">
+                           <span>-0,02</span> в рублях, по отношению к прошлой
+                           неделе
                         </div>
-                        <div class="chart__indicators">
-                           <img
-                              class="chart__icon"
-                              src="./images/arrow1.svg"
-                              alt="стрелка вниз"
-                           />
-                           <div class="chart__info">
-                              -0,02 в рублях, по отношению к прошлой неделе
-                           </div>
-                        </div>
-                        <div class="chart__indicators">
-                           <img
-                              class="chart__icon"
-                              src="./images/arrow2.svg"
-                              alt="стрелка вверх"
-                           />
-                           <div class="chart__info">
-                              -0,02 в рублях, по отношению к прошлой неделе
-                           </div>
+                     </div>
+                     <div class="chart__indicators">
+                        <img
+                           class="chart__icon"
+                           src="./images/arrow2.svg"
+                           alt="стрелка вверх"
+                        />
+                        <div class="chart__info">
+                           <span>-0,02</span> в рублях, по отношению к прошлой
+                           неделе
                         </div>
                      </div>
                   </div>
@@ -95,21 +94,20 @@
          <section class="chart">
             <div class="container">
                <div class="chart__body">
-                  <h2 class="chart__title title">
-                     Сводный индекс активности розницы (товары, работы, услуги)
-                  </h2>
-                  <div class="chart__row">
-                     <div class="chart__content">
-                        <div class="chart__text">
-                           Формируется еженедельно и учитывает все способы
-                           безналичной оплаты, которые отражаются в платежных
-                           документах (контактные, безконтактные, QR-коды и
-                           прочие).
-                        </div>
+                  <div class="chart__content">
+                     <div class="chart__text text">
+                        Формируется еженедельно и учитывает все способы
+                        безналичной оплаты, которые отражаются в платежных
+                        документах (контактные, безконтактные, QR-коды и
+                        прочие).
                      </div>
-                     <div class="chart__chart chart__chart_bottom">
-
-                     </div>
+                  </div>
+                  <div class="chart__chart chart__chart_bottom">
+                     <h2 class="chart__title title">
+                        Сводный индекс активности розницы (товары, работы,
+                        услуги)
+                     </h2>
+                     <canvas id="myChart2"></canvas>
                   </div>
                </div>
             </div>
@@ -151,9 +149,13 @@
       <footer class="footer">
          <div class="container">
             <div class="footer__body">
-               <div class="footer__name text">
-                  РУП “Информационно-издательский центр по налогам и сборам”
-               </div>
+               <a href="https://info-center.by" class="footer__logo">
+                  <img src="./images/logo.png" alt="Логотип" />
+                  <div class="footer__text">
+                     Республиканское унитарное предприятие
+                     «Информационно-издательский центр по налогам и сборам»
+                  </div>
+               </a>
                <a href="" class="footer__button button">Связяться</a>
             </div>
          </div>
