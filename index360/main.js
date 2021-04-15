@@ -199,7 +199,7 @@ const config1 = {
    options: {},
 };
 const config2 = {
-   type: 'line',
+   type: 'bar',
    data: {
       labels: [
          '1.2021',
