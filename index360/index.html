@@ -17,7 +17,7 @@
             <a href="https://info-center.by" class="header__logo">
                <img src="./images/logo.png" alt="Логотип" />
                <div class="header__text">
-                  Республиканское унитарное предприятие
+                  Республиканское унитарное предприятие<br />
                   «Информационно-издательский центр по налогам и сборам»
                </div>
             </a>
@@ -38,8 +38,8 @@
                      <a
                         href=""
                         class="main__button button"
-                        data-da="main__body,2,991"
-                        >Связяться</a
+                        data-da="main__body,2,920"
+                        >Связаться</a
                      >
                   </div>
                   <div class="main__image">
@@ -51,11 +51,12 @@
          <section class="chart chart_gray">
             <div class="container">
                <div class="chart__body">
-						<div class="chart__chart">
-							<h2 class="chart__title title">
-								Сводный индекс активности розницы (товары, работы, услуги)
-							</h2>
-                     <canvas id="myChart1"></canvas>
+                  <div class="chart__chart">
+                     <h2 class="chart__title title">
+                        Сводный индекс активности розницы (товары, работы,
+                        услуги)
+                     </h2>
+                     <div id="myChart1"></div>
                   </div>
                   <div class="chart__content">
                      <div class="chart__text text">
@@ -104,10 +105,9 @@
                   </div>
                   <div class="chart__chart chart__chart_bottom">
                      <h2 class="chart__title title">
-                        Сводный индекс активности розницы (товары, работы,
-                        услуги)
+                        Соотношение наличной/безналичной форм оплаты в рознице
                      </h2>
-                     <canvas id="myChart2"></canvas>
+                     <div id="myChart2"></div>
                   </div>
                </div>
             </div>
@@ -145,6 +145,83 @@
                </div>
             </div>
          </div>
+         <div class="form">
+            <div class="container">
+               <div class="form__container">
+						<div class="form__title">Исследование Big Data</div>
+                  <form id="" action="/" class="form__body">
+                     <div class="form__line">
+                        <input
+                           type="text"
+                           id="name"
+                           class="form__input _required"
+                           placeholder="Имя"
+                        />
+                        <div class="form__text-error">Обязательное поле</div>
+                     </div>
+                     <div class="form__line">
+                        <input
+                           type="text"
+                           id="name"
+                           class="form__input _required"
+                           placeholder="Фамилия"
+                        />
+                        <div class="form__text-error">Обязательное поле</div>
+                     </div>
+							<div class="form__line">
+								<input
+									type="tel"
+									id="phone"
+									class="form__input _required"
+									placeholder="Телефон"
+								/>
+								<div class="form__text-error">Обязательное поле</div>
+							</div>
+                     <div class="form__line">
+                        <input
+                           type="text"
+                           id="email"
+                           class="form__input _required _email"
+                           placeholder="E-mail"
+                        />
+                        <div class="form__text-error">Обязательное поле</div>
+                     </div>
+                     <div class="form__line">
+                        <input
+                           type="phone"
+                           id="unp"
+                           class="form__input _required"
+                           placeholder="Наименование организации / ИП"
+                        />
+                        <div class="form__text-error">Обязательное поле</div>
+                     </div>
+                     <div class="form__line">
+                        <input
+                           type="text"
+                           id="company"
+                           class="form__input _required"
+                           placeholder="Должность"
+                        />
+                     </div>
+                     <div class="form__line form__line_agree">
+                        <input
+                           type="checkbox"
+                           class="form__checkbox _required"
+                           id="form1"
+                        />
+                        <label class="form__checkbox-label" for="form1"></label>
+                        <div
+                           class="form__link"
+                           >Я согласен(а) с обработкой персональных данных</div
+                        >
+                     </div>
+                     <button type="submit" class="form__button button button_form">
+                        Отправить
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </div>
       </main>
       <footer class="footer">
          <div class="container">
@@ -152,14 +229,14 @@
                <a href="https://info-center.by" class="footer__logo">
                   <img src="./images/logo.png" alt="Логотип" />
                   <div class="footer__text">
-                     Республиканское унитарное предприятие
+                     Республиканское унитарное предприятие<br />
                      «Информационно-издательский центр по налогам и сборам»
                   </div>
                </a>
-               <a href="" class="footer__button button">Связяться</a>
             </div>
          </div>
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
       <script src="./chart.min.js"></script>
       <script src="./main.js"></script>
    </body>
