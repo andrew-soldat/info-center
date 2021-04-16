@@ -125,6 +125,26 @@ h6 {
       font-size: 14px;
    }
 }
+.logo {
+	display: flex;
+	align-items: center;
+	
+	img {
+		width: 45px;
+		height: 45px;
+	}
+	
+	&__text {
+		margin: 0px 0px 0px 30px;
+		font-size: 14px;
+		color: #263238;
+
+		@media (max-width: 565px) {
+			margin: 0px 0px 0px 20px;
+			font-size: 10px;
+		}
+	}
+}
 .header {
    background-color: transparent;
 	padding: 20px 0;
@@ -135,48 +155,17 @@ h6 {
    z-index: 5;
 	border-bottom: 1px solid #E9E8E8;
    transition: all 0.3s ease 0s;
-
-   &__logo {
-      display: flex;
-      align-items: center;
-
-      img {
-         width: 45px;
-         height: 45px;
-      }
-   }
-	
-   &__text {
-		margin: 0px 0px 0px 30px;
-		font-size: 14px;
-		color: #263238;
-
-
-		@media (max-width: 565px) {
-			margin: 0px 0px 0px 10px;
-			max-width: 240px;
-			font-size: 10px;
-		}
-   }
 }
 .main {
-   padding: 135px 0px 65px 0px;
+   padding: 135px 0px 60px 0px;
 	background-color: #f8f7f7;
-
-	@media (max-width: 920px) {
-		padding: 120px 0px 90px 0px;
-	}
-
-   @media (max-width: 565px) {
-      padding: 100px 0px 60px 0px;
-   }
 
    &__body {
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      @media (max-width: 920px) {
+      @media (max-width: 800px) {
          flex-direction: column;
 			justify-content: center;
       }
@@ -184,15 +173,10 @@ h6 {
 
    &__content {
       flex: 0 0 469px;
-      padding: 50px 0;
 
-      @media (max-width: 991px) {
+      @media (max-width: 800px) {
 			flex: 0 1 100%;
-         padding: 50px 0 0px;
-      }
-
-      @media (max-width: 565px) {
-         padding: 0px 0 15px;
+			padding: 0px 0px 15px 0px;
       }
    }
 
@@ -207,7 +191,7 @@ h6 {
    }
 
    &__title {
-      margin: 0px 0px px 0px;
+      margin: 0px 0px 30px 0px;
       color: #263238;
       font-size: 60px;
       font-weight: 900;
@@ -218,6 +202,7 @@ h6 {
    }
 
    &__text {
+		line-height: 1.4;
       margin: 0px 0px 35px 0px;
 
       @media (max-width: 565px) {
@@ -226,12 +211,14 @@ h6 {
    }
 
    &__button {
-      @media (max-width: 991px) {
+      @media (max-width: 800px) {
          margin: 20px 0px 0px 0px;
       }
    }
 
    &__image {
+		margin: 0px 0px 0px 20px;
+
       img {
          max-width: 100%;
       }
@@ -246,12 +233,9 @@ h6 {
 	}
 
    @media (max-width: 768px) {
-      padding: 50px 0;
+      padding: 40px 0;
    }
 
-   @media (max-width: 565px) {
-      padding: 20px 0;
-   }
 
    &__body {
       display: flex;
@@ -267,16 +251,12 @@ h6 {
       flex: 0 0 850px;
 
 		@media (max-width: 1100px) {
-			margin: 0px 0px 40px 0px;
+			margin: 0px 0px 20px 0px;
 			flex: 1 1 100%;
 
 			&_bottom {
 				order: -1;
 			}
-		}
-
-		@media (max-width: 565px) {
-			margin: 0px 0px 20px 0px;
 		}
    }
 
@@ -316,12 +296,8 @@ h6 {
    background-color: #ececec;
 
 	@media (max-width: 768px) {
-      padding: 30px 0;
+      padding: 40px 0;
    }
-
-	@media (max-width: 565px) {
-		padding: 20px 0;
-	}
 
    &__body {
       display: flex;
@@ -393,6 +369,11 @@ h6 {
 		width: 130px;
 		height: 130px;
 
+		@media (max-width: 565px) {
+			width: 88px;
+		height: 88px;
+		}
+
       img {
          max-width: 100%;
       }
@@ -418,7 +399,11 @@ h6 {
 }
 .form {
 	background-color: #ececec;
-	padding: 0px 0px 60px 0px;
+	padding: 60px 0px;
+
+	@media (max-width: 768px) {
+		padding: 40px 0;
+	}
 
 	&__container {
 		margin: 0 auto;
@@ -427,6 +412,10 @@ h6 {
 		padding: 30px;
 		background-color: #fff;
 		box-shadow: 0px 5px 40px rgba(180, 180, 180, 0.79);
+
+		@media (max-width: 565px) {
+			padding: 20px;
+		}
 	}
 
    &__title {
@@ -435,6 +424,11 @@ h6 {
       color: #263238; 
       font-size: 20px;
       font-weight: 700;
+
+		@media (max-width: 565px) {
+			font-size: 16px;
+			margin: 0px 0px 20px 0px;
+		}
    }
 
    &__line {
@@ -443,6 +437,10 @@ h6 {
       &_agree {
          display: flex;
 			margin: 0px 0px 30px 0px;
+
+			@media (max-width: 565px) {
+				margin: 0px 0px 20px 0px;
+			}
       }
    }
 
@@ -524,34 +522,4 @@ h6 {
    background-color: #ececec;
    padding: 20px 0px;
 	border-top: 1px solid #CCCCCC;
-
-   @media (max-width: 700px) {
-      padding: 0px 0px 30px 0px;
-   }
-
-   &__body {
-   }
-
-   &__logo {
-      display: flex;
-      align-items: center;
-		
-      img {
-			width: 45px;
-         height: 45px;
-      }
-   }
-	
-   &__text {
-		margin: 0px 0px 0px 30px;
-		font-size: 14px;
-		color: #263238;
-
-
-		@media (max-width: 565px) {
-			margin: 0px 0px 0px 10px;
-			max-width: 240px;
-			font-size: 10px;
-		}
-	}
 }
