@@ -334,3 +334,11 @@ var options1 = {
 
  var chart1 = new ApexCharts(document.querySelector("#myChart1"), options1);
  chart1.render();
+
+ $(function () {
+   $('a[href^="#"]').click(function (event) {
+      var target = $(this).attr('href');
+      $('html, body').animate({ scrollTop: $(target).offset().top - 54 }, 800);
+      return false;
+   });
+});
