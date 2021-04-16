@@ -132,138 +132,205 @@
    }
 })();
 
+const countData = {
+   weekYear: [
+      '1.2021',
+      '2.2021',
+      '3.2021',
+      '4.2021',
+      '5.2021',
+      '6.2021',
+      '7.2021',
+      '8.2021',
+      '9.2021',
+      '10.2021',
+      '11.2021',
+      '12.2021',
+      '13.2021',
+      '14.2021',
+   ],
+   indexNumberOfChecks: [
+      '-0.13',
+      '-0.08',
+      '-0.05',
+      '-0.05',
+      '-0.09',
+      '-0.09',
+      '-0.03',
+      '-0.02',
+      '-0.01',
+      '-0.12',
+      '-0.06',
+      '-0.05',
+      '-0.07',
+      '-0.02',
+   ],
+   indexAmountOfSales: [
+      '-0.04',
+      '0.03',
+      '0.07',
+      '0.12',
+      '0.08',
+      '0.12',
+      '0.16',
+      '0.17',
+      '0.22',
+      '0.03',
+      '0.08',
+      '0.05',
+      '0.01',
+      '0.06',
+   ],
+   shareOfCash: [
+      '0.50',
+      '0.51',
+      '0.50',
+      '0.51',
+      '0.52',
+      '0.50',
+      '0.49',
+      '0.51',
+      '0.52',
+      '0.52',
+      '0.51',
+      '0.52',
+      '0.55',
+      '0.54',
+   ],
+   shareOfNonCash: [
+      '0.50',
+      '0.49',
+      '0.50',
+      '0.49',
+      '0.48',
+      '0.50',
+      '0.51',
+      '0.49',
+      '0.48',
+      '0.48',
+      '0.49',
+      '0.48',
+      '0.45',
+      '0.46',
+   ],
+};
+
 const config1 = {
    type: 'line',
    data: {
-      labels: [
-         '1.2021',
-         '2.2021',
-         '3.2021',
-         '4.2021',
-         '5.2021',
-         '6.2021',
-         '7.2021',
-         '8.2021',
-         '9.2021',
-         '10.2021',
-         '11.2021',
-         '12.2021',
-         '13.2021',
-         '14.2021',
-      ],
+      labels: countData.weekYear,
       datasets: [
          {
             label: 'Индекс розничного бизнеса (кол-во чеков)',
             backgroundColor: '#E8464F',
             borderColor: '#E8464F',
-            data: [
-               '-0.13',
-               '-0.08',
-               '-0.05',
-               '-0.05',
-               '-0.09',
-               '-0.09',
-               '-0.03',
-               '-0.02',
-               '-0.01',
-               '-0.12',
-               '-0.06',
-               '-0.05',
-               '-0.07',
-               '-0.02',
-            ],
+            data: countData.indexNumberOfChecks,
          },
          {
             label: 'Индекс розничного бизнеса (по сумме продаж)',
             backgroundColor: '#30AA4B',
             borderColor: '#30AA4B',
-            data: [
-               '-0.04',
-               '0.03',
-               '0.07',
-               '0.12',
-               '0.08',
-               '0.12',
-               '0.16',
-               '0.17',
-               '0.22',
-               '0.03',
-               '0.08',
-               '0.05',
-               '0.01',
-               '0.06',
-            ],
+            data: countData.indexAmountOfSales,
          },
       ],
    },
    options: {},
 };
-const config2 = {
-   type: 'bar',
-   data: {
-      labels: [
-         '1.2021',
-         '2.2021',
-         '3.2021',
-         '4.2021',
-         '5.2021',
-         '6.2021',
-         '7.2021',
-         '8.2021',
-         '9.2021',
-         '10.2021',
-         '11.2021',
-         '12.2021',
-         '13.2021',
-         '14.2021',
-      ],
-      datasets: [
-         {
-            label: 'Доля наличных',
-            backgroundColor: '#466EB6',
-            borderColor: '#466EB6',
-            data: [
-               '0.50',
-               '0.51',
-               '0.50',
-               '0.51',
-               '0.52',
-               '0.50',
-               '0.49',
-               '0.51',
-               '0.52',
-               '0.52',
-               '0.51',
-               '0.52',
-               '0.55',
-               '0.54',
-            ],
-         },
-         {
-            label: 'Доля безналичных',
-            backgroundColor: '#353746',
-            borderColor: '#353746',
-            data: [
-               '0.50',
-               '0.49',
-               '0.50',
-               '0.49',
-               '0.48',
-               '0.50',
-               '0.51',
-               '0.49',
-               '0.48',
-               '0.48',
-               '0.49',
-               '0.48',
-               '0.45',
-               '0.46',
-            ],
-         },
-      ],
-   },
-   options: {},
-};
+// const config2 = {
+//    type: 'bar',
+//    data: {
+//       labels: countData.weekYear,
+//       datasets: [
+//          {
+//             label: 'Доля наличных',
+//             backgroundColor: '#466EB6',
+//             borderColor: '#466EB6',
+//             data: countData.shareOfCash,
+//          },
+//          {
+//             label: 'Доля безналичных',
+//             backgroundColor: '#353746',
+//             borderColor: '#353746',
+//             data: countData.shareOfNonCash,
+//          },
+//       ],
+//    },
+//    options: {},
+// };
 
-var myChart1 = new Chart(document.getElementById('myChart1'), config1);
-var myChart2 = new Chart(document.getElementById('myChart2'), config2);
+var options2 = {
+	series: [{
+	name: 'Доля наличных',
+	data: countData.shareOfCash
+ }, {
+	name: 'Доля безналичных',
+	data: countData.shareOfNonCash
+ }],
+	chart: {
+	type: 'bar',
+	height: 350,
+	stacked: true,
+	stackType: '100%'
+ },
+ responsive: [{
+	breakpoint: 480,
+	options: {
+	  legend: {
+		 position: 'bottom',
+		 offsetX: -10,
+		 offsetY: 0
+	  }
+	}
+ }],
+ xaxis: {
+	categories: countData.weekYear,
+ },
+ fill: {
+	opacity: 1
+ },
+ legend: {
+	position: 'top'
+ },
+ };
+
+ var chart2 = new ApexCharts(document.getElementById("myChart2"), options2);
+ chart2.render();
+// var myChart1 = new Chart(document.getElementById('myChart1'), config1);
+// var myChart2 = new Chart(document.getElementById('myChart2'), config2);
+var options1 = {
+	series: [{
+	name: 'Индекс розничного бизнеса (кол-во чеков)',
+	data: countData.indexNumberOfChecks
+ }, {
+	name: 'Индекс розничного бизнеса (по сумме продаж)',
+	data: countData.indexAmountOfSales
+ }],
+	chart: {
+	height: 350,
+	type: 'area',
+	zoom: {
+		enabled: false
+	 }
+ },
+ dataLabels: {
+	enabled: false
+ },
+//  stroke: {
+	curve: 'straight',
+//  },
+ xaxis: {
+	// type: 'datetime',
+	categories: countData.weekYear
+ },
+ legend: {
+	position: 'top'
+ },
+//  tooltip: {
+// 	x: {
+// 	  format: 'dd/MM/yy HH:mm'
+// 	},
+//  },
+ };
+
+ var chart1 = new ApexCharts(document.querySelector("#myChart1"), options1);
+ chart1.render();
