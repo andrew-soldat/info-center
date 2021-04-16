@@ -282,7 +282,7 @@ var options1 = {
 legend: {
 	position: 'top'
 },
-colors: [ '#30AA4B', '#E8464F' ]
+// colors: [ '#30AA4B', '#E8464F' ]
 };
 
 var options2 = {
@@ -318,7 +318,7 @@ var options2 = {
  legend: {
 	position: 'top'
  },
-colors: ['#466EB6', '#353746']
+// colors: ['#466EB6', '#353746']
  
  };
 
