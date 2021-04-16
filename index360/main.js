@@ -215,50 +215,7 @@ const countData = {
    ],
 };
 
-// const config1 = {
-//    type: 'line',
-//    data: {
-//       labels: countData.weekYear,
-//       datasets: [
-//          {
-//             label: 'Индекс розничного бизнеса (кол-во чеков)',
-//             backgroundColor: '#E8464F',
-//             borderColor: '#E8464F',
-//             data: countData.indexNumberOfChecks,
-//          },
-//          {
-//             label: 'Индекс розничного бизнеса (по сумме продаж)',
-//             backgroundColor: '#30AA4B',
-//             borderColor: '#30AA4B',
-//             data: countData.indexAmountOfSales,
-//          },
-//       ],
-//    },
-//    options: {},
-// };
-// const config2 = {
-//    type: 'bar',
-//    data: {
-//       labels: countData.weekYear,
-//       datasets: [
-//          {
-//             label: 'Доля наличных',
-//             backgroundColor: '#466EB6',
-//             borderColor: '#466EB6',
-//             data: countData.shareOfCash,
-//          },
-//          {
-//             label: 'Доля безналичных',
-//             backgroundColor: '#353746',
-//             borderColor: '#353746',
-//             data: countData.shareOfNonCash,
-//          },
-//       ],
-//    },
-//    options: {},
-// };
-
-var options1 = {
+let options1 = {
 	series: [{
 		name: 'Индекс розничного бизнеса (кол-во чеков)',
 		data: countData.indexNumberOfChecks
@@ -285,7 +242,7 @@ legend: {
 // colors: [ '#30AA4B', '#E8464F' ]
 };
 
-var options2 = {
+let options2 = {
 	series: [{
 	name: 'Доля наличных',
 	data: countData.shareOfCash
@@ -322,9 +279,9 @@ var options2 = {
  
  };
 
-var chart1 = new ApexCharts(document.getElementById("myChart1"), options1);
+let chart1 = new ApexCharts(document.getElementById("myChart1"), options1);
 chart1.render();
-var chart2 = new ApexCharts(document.getElementById("myChart2"), options2);
+let chart2 = new ApexCharts(document.getElementById("myChart2"), options2);
  chart2.render();
  
  $(function () {
