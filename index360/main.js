@@ -215,27 +215,27 @@ const countData = {
    ],
 };
 
-const config1 = {
-   type: 'line',
-   data: {
-      labels: countData.weekYear,
-      datasets: [
-         {
-            label: 'Индекс розничного бизнеса (кол-во чеков)',
-            backgroundColor: '#E8464F',
-            borderColor: '#E8464F',
-            data: countData.indexNumberOfChecks,
-         },
-         {
-            label: 'Индекс розничного бизнеса (по сумме продаж)',
-            backgroundColor: '#30AA4B',
-            borderColor: '#30AA4B',
-            data: countData.indexAmountOfSales,
-         },
-      ],
-   },
-   options: {},
-};
+// const config1 = {
+//    type: 'line',
+//    data: {
+//       labels: countData.weekYear,
+//       datasets: [
+//          {
+//             label: 'Индекс розничного бизнеса (кол-во чеков)',
+//             backgroundColor: '#E8464F',
+//             borderColor: '#E8464F',
+//             data: countData.indexNumberOfChecks,
+//          },
+//          {
+//             label: 'Индекс розничного бизнеса (по сумме продаж)',
+//             backgroundColor: '#30AA4B',
+//             borderColor: '#30AA4B',
+//             data: countData.indexAmountOfSales,
+//          },
+//       ],
+//    },
+//    options: {},
+// };
 // const config2 = {
 //    type: 'bar',
 //    data: {
@@ -257,6 +257,33 @@ const config1 = {
 //    },
 //    options: {},
 // };
+
+var options1 = {
+	series: [{
+		name: 'Индекс розничного бизнеса (кол-во чеков)',
+		data: countData.indexNumberOfChecks
+	}, {
+		name: 'Индекс розничного бизнеса (по сумме продаж)',
+		data: countData.indexAmountOfSales
+	}],
+	chart: {
+		height: 350,
+		type: 'area',
+		zoom: {
+			enabled: false
+		}
+	},
+	dataLabels: {
+		enabled: false
+	},
+ xaxis: {
+	categories: countData.weekYear
+},
+legend: {
+	position: 'top'
+},
+colors: [ '#30AA4B', '#E8464F' ]
+};
 
 var options2 = {
 	series: [{
@@ -291,52 +318,17 @@ var options2 = {
  legend: {
 	position: 'top'
  },
+colors: ['#466EB6', '#353746']
+ 
  };
 
- var chart2 = new ApexCharts(document.getElementById("myChart2"), options2);
+var chart1 = new ApexCharts(document.getElementById("myChart1"), options1);
+chart1.render();
+var chart2 = new ApexCharts(document.getElementById("myChart2"), options2);
  chart2.render();
-// var myChart1 = new Chart(document.getElementById('myChart1'), config1);
-// var myChart2 = new Chart(document.getElementById('myChart2'), config2);
-var options1 = {
-	series: [{
-	name: 'Индекс розничного бизнеса (кол-во чеков)',
-	data: countData.indexNumberOfChecks
- }, {
-	name: 'Индекс розничного бизнеса (по сумме продаж)',
-	data: countData.indexAmountOfSales
- }],
-	chart: {
-	height: 350,
-	type: 'area',
-	zoom: {
-		enabled: false
-	 }
- },
- dataLabels: {
-	enabled: false
- },
-//  stroke: {
-	curve: 'straight',
-//  },
- xaxis: {
-	// type: 'datetime',
-	categories: countData.weekYear
- },
- legend: {
-	position: 'top'
- },
-//  tooltip: {
-// 	x: {
-// 	  format: 'dd/MM/yy HH:mm'
-// 	},
-//  },
- };
-
- var chart1 = new ApexCharts(document.querySelector("#myChart1"), options1);
- chart1.render();
-
+ 
  $(function () {
-   $('a[href^="#"]').click(function (event) {
+	 $('a[href^="#"]').click(function (event) {
       var target = $(this).attr('href');
       $('html, body').animate({ scrollTop: $(target).offset().top - 54 }, 800);
       return false;
