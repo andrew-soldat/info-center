@@ -236,6 +236,11 @@ h6 {
 .main__image {
   margin: 0px 0px 0px 20px;
 }
+@media (max-width: 800px) {
+  .main__image {
+    margin: 0px;
+  }
+}
 .main__image img {
   max-width: 100%;
 }
@@ -302,6 +307,9 @@ h6 {
 }
 .chart__info {
   margin: 0px 0px 0px 20px;
+}
+.chart__info span {
+  font-weight: 600;
 }
 
 .indicators {
@@ -400,6 +408,11 @@ h6 {
 .indicators__info {
   text-align: center;
 }
+@media (max-width: 1150px) {
+  .indicators__info {
+    text-align: left;
+  }
+}
 .indicators__number {
   font-size: 80px;
   font-weight: 700;
@@ -412,6 +425,11 @@ h6 {
 .indicators__text {
   font-size: 22px;
   color: #263238;
+}
+@media (max-width: 565px) {
+  .indicators__text {
+    font-size: 14px;
+  }
 }
 
 .form {

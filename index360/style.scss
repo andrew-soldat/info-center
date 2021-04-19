@@ -219,6 +219,10 @@ h6 {
    &__image {
 		margin: 0px 0px 0px 20px;
 
+		@media (max-width: 800px) {
+         margin: 0px;
+      }
+
       img {
          max-width: 100%;
       }
@@ -289,6 +293,10 @@ h6 {
 
 	&__info {
 		margin: 0px 0px 0px 20px;
+
+		span {
+			font-weight: 600;
+		}
 	}
 }
 .indicators {
@@ -381,6 +389,10 @@ h6 {
 
    &__info {
       text-align: center;
+
+		@media (max-width: 1150px) {
+			text-align: left;
+		}
    }
 
    &__number {
@@ -395,6 +407,10 @@ h6 {
    &__text {
       font-size: 22px;
       color: #263238;
+
+		@media (max-width: 565px) {
+			font-size: 14px;
+		}
    }
 }
 .form {
