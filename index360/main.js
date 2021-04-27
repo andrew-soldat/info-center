@@ -142,11 +142,11 @@ request.onload = () => {
 };
 
 function getData(data) {
-   const numberOfChecks = document.getElementById('numberOfChecks');
-   numberOfChecks.innerHTML = countData.relationToLastWeekIndexNumberOfChecks;
+   // const numberOfChecks = document.getElementById('numberOfChecks');
+   // numberOfChecks.innerHTML = countData.relationToLastWeekIndexNumberOfChecks;
 
-   const amountOfSales = document.getElementById('amountOfSales');
-   amountOfSales.innerHTML = countData.relationToLastWeekIndexAmountOfSales;
+   // const amountOfSales = document.getElementById('amountOfSales');
+   // amountOfSales.innerHTML = countData.relationToLastWeekIndexAmountOfSales;
 
    let options1 = {
       series: [
