@@ -9,6 +9,7 @@
          rel="stylesheet"
       />
       <link rel="stylesheet" href="style.css" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
       <title>Индекс 360</title>
    </head>
    <body>
@@ -43,7 +44,7 @@
                      >
                   </div>
                   <div class="main__image">
-                     <img src="./images/main-bg.png" alt="" />
+                     <img src="./images/main-bg.png" alt="Картинка" />
                   </div>
                </div>
             </div>
@@ -122,7 +123,7 @@
                   </div>
                   <div class="indicators__column indicators__column_center">
                      <div class="indicators__icon">
-                        <img src="./images/indicators/02.svg" alt="иконка" />
+                        <img src="./images/indicators/03.svg" alt="иконка" />
                      </div>
                      <div class="indicators__info">
                         <div class="indicators__number">15+</div>
@@ -131,7 +132,7 @@
                   </div>
                   <div class="indicators__column indicators__column_right">
                      <div class="indicators__icon">
-                        <img src="./images/indicators/03.svg" alt="иконка" />
+                        <img src="./images/indicators/02.svg" alt="иконка" />
                      </div>
                      <div class="indicators__info">
                         <div class="indicators__number">100+</div>
@@ -141,11 +142,11 @@
                </div>
             </div>
          </div>
-         <div id="form" class="form">
+         <div class="form">
             <div class="container">
                <div class="form__container">
 						<h2 class="form__title">Аналитика на основе платёжных документов</h2>
-                  <form id="" action="#" class="form__body">
+                  <form id="form" action="#" class="form__body">
                      <div class="form__line">
                         <input
                            type="text"
@@ -198,19 +199,18 @@
                            class="form__input _required"
                            placeholder="Должность"
                         />
+								<div class="form__text-error">Обязательное поле</div>
                      </div>
-                     <div class="form__line form__line_agree">
-                        <input
+							<div class="form__line">
+								<div class="checkbox">
+									<input
                            type="checkbox"
-                           class="form__checkbox _required"
-                           id="form1"
+                           class="checkbox__input _required"
+                           id="checkbox" 
                         />
-                        <label class="form__checkbox-label" for="form1"></label>
-                        <div
-                           class="form__link"
-                           >Я согласен(а) с обработкой персональных данных</div
-                        >
-                     </div>
+								<label class="checkbox__label" for="checkbox"><span>Я согласен(а) с обработкой персональных данных</span></label>
+								</div>
+							</div>
                      <button type="submit" class="form__button button button_form">
                         Отправить
                      </button>
