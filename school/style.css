@@ -695,6 +695,10 @@ main {
 .teacher__text p:last-child {
   margin: 0px 0px 0px 0px;
 }
+.teacher__image img {
+  max-width: 100%;
+}
+
 .submit {
   margin: 0px 0px 120px 0px;
   padding: 40px 0;

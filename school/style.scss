@@ -852,6 +852,9 @@ main {
 	}
 
 	&__image {
+		img {
+			max-width: 100%;
+		}
 	}
 }
 .submit {
