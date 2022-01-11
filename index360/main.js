@@ -151,12 +151,12 @@ function getData(data) {
    let options1 = {
       series: [
          {
-            name: 'Индекс розничного бизнеса (кол-во чеков)',
+            name: 'Индекс розничного бизнеса (кол-во чеков), 2021',
             data: countData.indexNumberOfChecks,
          },
          {
-            name: 'Индекс розничного бизнеса (по сумме продаж)',
-            data: countData.indexAmountOfSales,
+            name: 'Индекс розничного бизнеса (кол-во чеков), 2022',
+            data: countData.indexNumberOfChecks2022,
          },
       ],
       chart: {
@@ -178,7 +178,37 @@ function getData(data) {
       // colors: [ "#30AA4B", "#E8464F" ]
    };
 
-   let options2 = {
+	let options2 = {
+		series: [
+			{
+				name: 'Индекс розничного бизнеса (по сумме продаж), 2021',
+				data: countData.indexAmountOfSales,
+			},
+			{
+				name: 'Индекс розничного бизнеса (по сумме продаж), 2022',
+				data: countData.indexAmountOfSales2022,
+			},
+		],
+		chart: {
+			height: 350,
+			type: 'area',
+			zoom: {
+				enabled: false,
+			},
+		},
+		dataLabels: {
+			enabled: false,
+		},
+		xaxis: {
+			categories: countData.weekYear,
+		},
+		legend: {
+			position: 'top',
+		},
+		// colors: [ "#30AA4B", "#E8464F" ]
+	};
+
+   let options3 = {
       series: [
          {
             name: 'Доля наличных',
@@ -208,7 +238,7 @@ function getData(data) {
          },
       ],
       xaxis: {
-         categories: countData.weekYear,
+         categories: countData.weekYearChart3,
       },
       fill: {
          opacity: 1,
@@ -218,11 +248,13 @@ function getData(data) {
       },
       // colors: ["#466EB6", "#353746"]
    };
-
+	
    let chart1 = new ApexCharts(document.getElementById('myChart1'), options1);
    chart1.render();
    let chart2 = new ApexCharts(document.getElementById('myChart2'), options2);
    chart2.render();
+   let chart3 = new ApexCharts(document.getElementById('myChart3'), options3);
+   chart3.render();
 }
 
 $(function () {
@@ -303,4 +335,11 @@ document.addEventListener('DOMContentLoaded', function () {
          );
       }
    }
+});
+
+var tooltipTriggerList = [].slice.call(
+   document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+   return new bootstrap.Tooltip(tooltipTriggerEl);
 });

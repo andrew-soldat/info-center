@@ -8,6 +8,8 @@
          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
          rel="stylesheet"
       />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
       <link rel="stylesheet" href="style.css" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
       <title>Индекс 360</title>
@@ -51,42 +53,31 @@
          </section>
          <section class="chart chart_gray">
             <div class="container">
-               <div class="chart__body">
-                  <div class="chart__chart">
-                     <h2 class="chart__title title">
-                        Сводный индекс активности розницы (товары, работы,
-                        услуги), 2021
-                     </h2>
-                     <div id="myChart1"></div>
-                  </div>
-                  <div class="chart__content">
-                     <div class="chart__text text">
-                        Отражает изменение активности розницы в сравнении с аналогичным периодом прошлого года. Положительные значения свидетельствуют о том, что в текущем периоде общая выручка в рознице (количество чеков) выше, чем за аналогичный период предыдущего года. В качестве анализируемого периода выбрана календарная неделя года.
-                     </div>
-                     <!-- <div class="chart__indicators">
-                        <img
-                           class="chart__icon"
-                           src="./images/arrow1.svg"
-                           alt="стрелка вниз"
-                        />
-                        <div class="chart__info">
-                           <span id="numberOfChecks"></span> в рублях, по отношению к прошлой
-                           неделе
-                        </div>
-                     </div>
-                     <div class="chart__indicators">
-                        <img
-                           class="chart__icon"
-                           src="./images/arrow2.svg"
-                           alt="стрелка вверх"
-                        />
-                        <div class="chart__info">
-                           <span id="amountOfSales"></span> в рублях, по отношению к прошлой
-                           неделе
-                        </div>
-                     </div> -->
-                  </div>
-               </div>
+					<h2 class="chart__title title">
+						Сводный индекс активности розницы (товары, работы,
+						услуги), 2021 <i class="bi bi-info-circle ms-2" data-bs-toggle="tooltip" title="Отражает изменение активности розницы в сравнении с аналогичным периодом прошлого года. Положительные значения свидетельствуют о том, что в текущем периоде общая выручка в рознице (количество чеков) выше, чем за аналогичный период предыдущего года. В качестве анализируемого периода выбрана календарная неделя года."></i>
+					</h2>
+					<nav>
+						<div class="nav nav-tab nav-tab-chart" id="contacts-tab" role="tablist">
+							<button class="nav-tab-chart__link active" id="nav-chart-1-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-1" type="button" role="tab" aria-controls="nav-chart-1" aria-selected="true">
+								Индекс розничного бизнеса (кол-во чеков)
+							</button>
+							<button class="nav-tab-chart__link" id="nav-chart-2-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-2" type="button" role="tab" aria-controls="nav-chart-2" aria-selected="false">
+								Индекс розничного бизнеса (по сумме продаж)
+							</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabChart">
+						<div class="tab-pane fade pt-4 nav-tab-chart__body show active" id="nav-chart-1" role="tabpanel" aria-labelledby="nav-chart-1">
+							<div class="chart-wrapper">
+								<div id="myChart1" class="chart-wrapper__body"></div>
+
+							</div>
+						</div>
+						<div class="tab-pane fade pt-4 nav-tab-chart__body" id="nav-chart-2" role="tabpanel" aria-labelledby="nav-chart-2">
+							<div id="myChart2"></div>
+						</div>
+					</div>
             </div>
          </section>
          <section class="chart">
@@ -104,7 +95,7 @@
                      <h2 class="chart__title title">
                         Соотношение наличной/безналичной форм оплаты в рознице, 2021
                      </h2>
-                     <div id="myChart2"></div>
+                     <div id="myChart3"></div>
                   </div>
                </div>
             </div>
@@ -233,6 +224,7 @@
          </div>
       </footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
       <script src="./main.js"></script>
    </body>
