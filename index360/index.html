@@ -71,33 +71,43 @@
 						<div class="tab-pane fade pt-4 nav-tab-chart__body show active" id="nav-chart-1" role="tabpanel" aria-labelledby="nav-chart-1">
 							<div class="chart-wrapper">
 								<div id="myChart1" class="chart-wrapper__body"></div>
-
 							</div>
 						</div>
 						<div class="tab-pane fade pt-4 nav-tab-chart__body" id="nav-chart-2" role="tabpanel" aria-labelledby="nav-chart-2">
-							<div id="myChart2"></div>
+							<div class="chart-wrapper">
+								<div id="myChart2" class="chart-wrapper__body"></div>
+							</div>
 						</div>
 					</div>
             </div>
          </section>
          <section class="chart">
             <div class="container">
-               <div class="chart__body">
-                  <div class="chart__content">
-                     <div class="chart__text text">
-                        Формируется еженедельно и учитывает все способы
-                        безналичной оплаты, которые отражаются в платежных
-                        документах (контактные, бесконтактные, QR-коды и
-                        прочие).
-                     </div>
-                  </div>
-                  <div class="chart__chart chart__chart_bottom">
-                     <h2 class="chart__title title">
-                        Соотношение наличной/безналичной форм оплаты в рознице, 2021
-                     </h2>
-                     <div id="myChart3"></div>
-                  </div>
-               </div>
+					<h2 class="chart__title title">
+						Соотношение наличной/безналичной форм оплаты в рознице, 2021 <i class="bi bi-info-circle ms-2" data-bs-toggle="tooltip" title="Формируется еженедельно и учитывает все способы безналичной оплаты, которые отражаются в платежных документах (контактные, бесконтактные, QR-коды и прочие)."></i>
+					</h2>
+					<nav>
+						<div class="nav nav-tab nav-tab-chart nav-tab-chart_white" id="contacts-tab" role="tablist">
+							<button class="nav-tab-chart__link active" id="nav-chart-3-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-3" type="button" role="tab" aria-controls="nav-chart-3" aria-selected="true">
+								Доля наличных
+							</button>
+							<button class="nav-tab-chart__link" id="nav-chart-4-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-4" type="button" role="tab" aria-controls="nav-chart-2" aria-selected="false">
+								Доля безналичных
+							</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabChart">
+						<div class="tab-pane fade pt-4 nav-tab-chart__body nav-tab-chart__body_white show active" id="nav-chart-3" role="tabpanel" aria-labelledby="nav-chart-3">
+							<div class="chart-wrapper">
+								<div id="myChart3" class="chart-wrapper__body"></div>
+							</div>
+						</div>
+						<div class="tab-pane fade pt-4 nav-tab-chart__body nav-tab-chart__body_white" id="nav-chart-4" role="tabpanel" aria-labelledby="nav-chart-4">
+							<div class="chart-wrapper">
+								<div id="myChart4" class="chart-wrapper__body"></div>
+							</div>
+						</div>
+					</div>
             </div>
          </section>
          <div class="indicators">
