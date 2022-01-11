@@ -211,12 +211,12 @@ function getData(data) {
    let options3 = {
       series: [
          {
-            name: 'Доля наличных',
+            name: 'Доля наличных, 2021',
             data: countData.shareOfCash,
          },
          {
-            name: 'Доля безналичных',
-            data: countData.shareOfNonCash,
+            name: 'Доля наличных, 2022',
+            data: countData.shareOfCash2022,
          },
       ],
       chart: {
@@ -238,7 +238,48 @@ function getData(data) {
          },
       ],
       xaxis: {
-         categories: countData.weekYearChart3,
+         categories: countData.weekYear,
+      },
+      fill: {
+         opacity: 1,
+      },
+      legend: {
+         position: 'top',
+      },
+      // colors: ["#466EB6", "#353746"]
+   };
+
+   let options4 = {
+      series: [
+         {
+            name: 'Доля безналичных, 2021',
+            data: countData.shareOfNonCash,
+         },
+         {
+            name: 'Доля безналичных, 2022',
+            data: countData.shareOfNonCash2022,
+         },
+      ],
+      chart: {
+         type: 'bar',
+         height: 350,
+         stacked: true,
+         stackType: '100%',
+      },
+      responsive: [
+         {
+            breakpoint: 480,
+            options: {
+               legend: {
+                  position: 'bottom',
+                  offsetX: -10,
+                  offsetY: 0,
+               },
+            },
+         },
+      ],
+      xaxis: {
+         categories: countData.weekYear,
       },
       fill: {
          opacity: 1,
@@ -255,6 +296,8 @@ function getData(data) {
    chart2.render();
    let chart3 = new ApexCharts(document.getElementById('myChart3'), options3);
    chart3.render();
+   let chart4 = new ApexCharts(document.getElementById('myChart4'), options4);
+   chart4.render();
 }
 
 $(function () {
