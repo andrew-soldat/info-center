@@ -142,21 +142,21 @@ request.onload = () => {
 };
 
 function getData(data) {
-   const numberOfChecks = document.getElementById('numberOfChecks');
-   numberOfChecks.innerHTML = countData.relationToLastWeekIndexNumberOfChecks;
+   // const numberOfChecks = document.getElementById('numberOfChecks');
+   // numberOfChecks.innerHTML = countData.relationToLastWeekIndexNumberOfChecks;
 
-   const amountOfSales = document.getElementById('amountOfSales');
-   amountOfSales.innerHTML = countData.relationToLastWeekIndexAmountOfSales;
+   // const amountOfSales = document.getElementById('amountOfSales');
+   // amountOfSales.innerHTML = countData.relationToLastWeekIndexAmountOfSales;
 
    let options1 = {
       series: [
          {
-            name: 'Индекс розничного бизнеса (кол-во чеков)',
+            name: 'Индекс розничного бизнеса (кол-во чеков), 2021',
             data: countData.indexNumberOfChecks,
          },
          {
-            name: 'Индекс розничного бизнеса (по сумме продаж)',
-            data: countData.indexAmountOfSales,
+            name: 'Индекс розничного бизнеса (кол-во чеков), 2022',
+            data: countData.indexNumberOfChecks2022,
          },
       ],
       chart: {
@@ -178,7 +178,37 @@ function getData(data) {
       // colors: [ "#30AA4B", "#E8464F" ]
    };
 
-   let options2 = {
+	let options2 = {
+		series: [
+			{
+				name: 'Индекс розничного бизнеса (по сумме продаж), 2021',
+				data: countData.indexAmountOfSales,
+			},
+			{
+				name: 'Индекс розничного бизнеса (по сумме продаж), 2022',
+				data: countData.indexAmountOfSales2022,
+			},
+		],
+		chart: {
+			height: 350,
+			type: 'area',
+			zoom: {
+				enabled: false,
+			},
+		},
+		dataLabels: {
+			enabled: false,
+		},
+		xaxis: {
+			categories: countData.weekYear,
+		},
+		legend: {
+			position: 'top',
+		},
+		// colors: [ "#30AA4B", "#E8464F" ]
+	};
+
+   let options3 = {
       series: [
          {
             name: 'Доля наличных',
@@ -208,7 +238,7 @@ function getData(data) {
          },
       ],
       xaxis: {
-         categories: countData.weekYear,
+         categories: countData.weekYearChart3,
       },
       fill: {
          opacity: 1,
@@ -218,11 +248,13 @@ function getData(data) {
       },
       // colors: ["#466EB6", "#353746"]
    };
-
+	
    let chart1 = new ApexCharts(document.getElementById('myChart1'), options1);
    chart1.render();
    let chart2 = new ApexCharts(document.getElementById('myChart2'), options2);
    chart2.render();
+   let chart3 = new ApexCharts(document.getElementById('myChart3'), options3);
+   chart3.render();
 }
 
 $(function () {
@@ -231,4 +263,83 @@ $(function () {
       $('html, body').animate({ scrollTop: $(target).offset().top - 54 }, 800);
       return false;
    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+   let form = document.getElementById('form');
+
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+
+      let error = formValidate(form);
+
+      let formData = new FormData(form);
+
+      if (error === 0) {
+         let response = await fetch('index.php', {
+            method: 'POST',
+            body: formData,
+         });
+         if (response.ok) {
+            let result = await response.json();
+            alert(result.message);
+            formData.reset();
+         } else {
+            form.reset();
+            alert('Ошибка');
+         }
+      }
+
+      function formValidate(form) {
+         let error = 0;
+         let formRequired = document.querySelectorAll('._required');
+
+         for (let i = 0; i < formRequired.length; i++) {
+            const input = formRequired[i];
+            formRemoveError(input);
+
+            if (input.classList.contains('_email')) {
+               if (emailTest(input)) {
+                  formAddError(input);
+                  error++;
+               }
+            } else if (
+               input.getAttribute('type') === 'checkbox' &&
+               input.checked === false
+            ) {
+               formAddError(input);
+               error++;
+            } else if (input.value === '') {
+               formAddError(input);
+               error++;
+            }
+         }
+         return error;
+      }
+
+      function formAddError(input) {
+         input.parentElement.classList.add('_error');
+         input.classList.add('_error');
+      }
+
+      function formRemoveError(input) {
+         input.parentElement.classList.remove('_error');
+         input.classList.remove('_error');
+      }
+
+      function emailTest(input) {
+         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(
+            input.value
+         );
+      }
+   }
+});
+
+var tooltipTriggerList = [].slice.call(
+   document.querySelectorAll('[data-bs-toggle="tooltip"]')
+);
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
