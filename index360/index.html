@@ -8,20 +8,16 @@
          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
          rel="stylesheet"
       />
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
       <link rel="stylesheet" href="style.css" />
-		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
       <title>Индекс 360</title>
    </head>
    <body>
       <header class="header">
          <div class="container">
-            <a href="https://info-center.by" class="logo">
-               <img src="./images/logo.png" alt="Логотип" />
-               <div class="logo__text">
-                  Республиканское унитарное предприятие<br />
-                  «Информационно-издательский центр по налогам и сборам»
+            <a href="https://info-center.by" class="header__logo">
+               <img src="./images/logo.svg" alt="Логотип" />
+               <div class="header__text text">
+                  РУП “Информационно-издательский центр по налогам и сборам”
                </div>
             </a>
          </div>
@@ -33,69 +29,85 @@
                   <div class="main__content">
                      <div class="main__subtitle">Специальный проект</div>
                      <h1 class="main__title">Индекс 360&deg;</h1>
-                     <div class="main__text text">
+                     <div class="main__text">
                         Еженедельная информация о потребительской активности на
                         базе агрегированных и обезличенных данных, поступающих
                         от кассового оборудования
                      </div>
                      <a
-                        href="#form"
+                        href=""
                         class="main__button button"
-                        data-da="main__body,2,800"
-                        >Связаться</a
+                        data-da="main__body,2,991"
+                        >Связяться</a
                      >
                   </div>
                   <div class="main__image">
-                     <img src="./images/main-bg.png" alt="Картинка" />
+                     <img src="./images/main-bg.png" alt="" />
                   </div>
                </div>
             </div>
          </section>
          <section class="chart chart_gray">
             <div class="container">
-					<h2 class="chart__title title">
-						Сводный индекс активности розницы (товары, работы,
-						услуги), 2021 <i class="bi bi-info-circle ms-2" data-bs-toggle="tooltip" title="Отражает изменение активности розницы в сравнении с аналогичным периодом прошлого года. Положительные значения свидетельствуют о том, что в текущем периоде общая выручка в рознице (количество чеков) выше, чем за аналогичный период предыдущего года. В качестве анализируемого периода выбрана календарная неделя года."></i>
-					</h2>
-					<nav>
-						<div class="nav nav-tab nav-tab-chart" id="contacts-tab" role="tablist">
-							<button class="nav-tab-chart__link active" id="nav-chart-1-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-1" type="button" role="tab" aria-controls="nav-chart-1" aria-selected="true">
-								Индекс розничного бизнеса (кол-во чеков)
-							</button>
-							<button class="nav-tab-chart__link" id="nav-chart-2-tab" data-bs-toggle="tab" data-bs-target="#nav-chart-2" type="button" role="tab" aria-controls="nav-chart-2" aria-selected="false">
-								Индекс розничного бизнеса (по сумме продаж)
-							</button>
-						</div>
-					</nav>
-					<div class="tab-content" id="nav-tabChart">
-						<div class="tab-pane fade pt-4 nav-tab-chart__body show active" id="nav-chart-1" role="tabpanel" aria-labelledby="nav-chart-1">
-							<div class="chart-wrapper">
-								<div id="myChart1" class="chart-wrapper__body"></div>
-
-							</div>
-						</div>
-						<div class="tab-pane fade pt-4 nav-tab-chart__body" id="nav-chart-2" role="tabpanel" aria-labelledby="nav-chart-2">
-							<div id="myChart2"></div>
-						</div>
-					</div>
+               <div class="chart__body">
+                  <h2 class="chart__title title">
+                     Сводный индекс активности розницы (товары, работы, услуги)
+                  </h2>
+                  <div class="chart__row">
+                     <div class="chart__chart">
+                        <img src="./images/chart1.png" alt="" />
+                     </div>
+                     <div class="chart__content">
+                        <div class="chart__text">
+                           Отражает изменение активности розницы в сравнении с
+                           аналогичным периодом прошлого года. Плюсовые значения
+                           свидетельствуют о том, что в текущем периоде общая
+                           выручка в рознице (количество чеков) выше, чем за
+                           аналогичный период предыдущего года.
+                        </div>
+                        <div class="chart__indicators">
+                           <img
+                              class="chart__icon"
+                              src="./images/arrow1.svg"
+                              alt="стрелка вниз"
+                           />
+                           <div class="chart__info">
+                              -0,02 в рублях, по отношению к прошлой неделе
+                           </div>
+                        </div>
+                        <div class="chart__indicators">
+                           <img
+                              class="chart__icon"
+                              src="./images/arrow2.svg"
+                              alt="стрелка вверх"
+                           />
+                           <div class="chart__info">
+                              -0,02 в рублях, по отношению к прошлой неделе
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </section>
          <section class="chart">
             <div class="container">
                <div class="chart__body">
-                  <div class="chart__content">
-                     <div class="chart__text text">
-                        Формируется еженедельно и учитывает все способы
-                        безналичной оплаты, которые отражаются в платежных
-                        документах (контактные, бесконтактные, QR-коды и
-                        прочие).
+                  <h2 class="chart__title title">
+                     Сводный индекс активности розницы (товары, работы, услуги)
+                  </h2>
+                  <div class="chart__row">
+                     <div class="chart__content">
+                        <div class="chart__text">
+                           Формируется еженедельно и учитывает все способы
+                           безналичной оплаты, которые отражаются в платежных
+                           документах (контактные, безконтактные, QR-коды и
+                           прочие).
+                        </div>
                      </div>
-                  </div>
-                  <div class="chart__chart chart__chart_bottom">
-                     <h2 class="chart__title title">
-                        Соотношение наличной/безналичной форм оплаты в рознице, 2021
-                     </h2>
-                     <div id="myChart3"></div>
+                     <div class="chart__chart chart__chart_bottom">
+                        <img src="./images/chart2.png" alt="" />
+                     </div>
                   </div>
                </div>
             </div>
@@ -114,7 +126,7 @@
                   </div>
                   <div class="indicators__column indicators__column_center">
                      <div class="indicators__icon">
-                        <img src="./images/indicators/03.svg" alt="иконка" />
+                        <img src="./images/indicators/02.svg" alt="иконка" />
                      </div>
                      <div class="indicators__info">
                         <div class="indicators__number">15+</div>
@@ -123,7 +135,7 @@
                   </div>
                   <div class="indicators__column indicators__column_right">
                      <div class="indicators__icon">
-                        <img src="./images/indicators/02.svg" alt="иконка" />
+                        <img src="./images/indicators/03.svg" alt="иконка" />
                      </div>
                      <div class="indicators__info">
                         <div class="indicators__number">100+</div>
@@ -133,99 +145,19 @@
                </div>
             </div>
          </div>
-         <div class="form">
-            <div class="container">
-               <div class="form__container">
-						<h2 class="form__title">Аналитика на основе платёжных документов</h2>
-                  <form id="form" action="#" class="form__body">
-                     <div class="form__line">
-                        <input
-                           type="text"
-                           id="name"
-                           class="form__input _required"
-                           placeholder="Имя"
-                        />
-                        <div class="form__text-error">Обязательное поле</div>
-                     </div>
-                     <div class="form__line">
-                        <input
-                           type="text"
-                           id="name"
-                           class="form__input _required"
-                           placeholder="Фамилия"
-                        />
-                        <div class="form__text-error">Обязательное поле</div>
-                     </div>
-							<div class="form__line">
-								<input
-									type="tel"
-									id="phone"
-									class="form__input _required"
-									placeholder="Телефон"
-								/>
-								<div class="form__text-error">Обязательное поле</div>
-							</div>
-                     <div class="form__line">
-                        <input
-                           type="text"
-                           id="email"
-                           class="form__input _required _email"
-                           placeholder="E-mail"
-                        />
-                        <div class="form__text-error">Обязательное поле</div>
-                     </div>
-                     <div class="form__line">
-                        <input
-                           type="text"
-                           id=""
-                           class="form__input _required"
-                           placeholder="Наименование организации / ИП"
-                        />
-                        <div class="form__text-error">Обязательное поле</div>
-                     </div>
-                     <div class="form__line">
-                        <input
-                           type="text"
-                           id=""
-                           class="form__input _required"
-                           placeholder="Должность"
-                        />
-								<div class="form__text-error">Обязательное поле</div>
-                     </div>
-							<div class="form__line">
-								<div class="checkbox">
-									<input
-                           type="checkbox"
-                           class="checkbox__input _required"
-                           id="checkbox" 
-                        />
-								<label class="checkbox__label" for="checkbox"><span>Я согласен(а) с обработкой персональных данных</span></label>
-								</div>
-							</div>
-                     <button type="submit" class="form__button button button_form">
-                        Отправить
-                     </button>
-                  </form>
-               </div>
-            </div>
-         </div>
       </main>
       <footer class="footer">
          <div class="container">
             <div class="footer__body">
-               <a href="https://info-center.by" class="logo">
-                  <img src="./images/logo.png" alt="Логотип" />
-                  <div class="logo__text">
-                     Республиканское унитарное предприятие<br />
-                     «Информационно-издательский центр по налогам и сборам»
-                  </div>
-               </a>
+               <div class="footer__name text">
+                  РУП “Информационно-издательский центр по налогам и сборам”
+               </div>
+               <a href="" class="footer__button button">Связяться</a>
             </div>
          </div>
       </footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script src="./main.js"></script>
    </body>
 </html>
