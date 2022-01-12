@@ -215,8 +215,8 @@ function getData(data) {
             data: countData.shareOfCash,
          },
          {
-            name: 'Доля наличных, 2022',
-            data: countData.shareOfCash2022,
+				name: 'Доля безналичных, 2021',
+            data: countData.shareOfNonCash,
          },
       ],
       chart: {
@@ -252,8 +252,9 @@ function getData(data) {
    let options4 = {
       series: [
          {
-            name: 'Доля безналичных, 2021',
-            data: countData.shareOfNonCash,
+            
+				name: 'Доля наличных, 2022',
+				data: countData.shareOfCash2022,
          },
          {
             name: 'Доля безналичных, 2022',
@@ -279,7 +280,7 @@ function getData(data) {
          },
       ],
       xaxis: {
-         categories: countData.weekYear,
+         categories: countData.weekYear2022,
       },
       fill: {
          opacity: 1,
