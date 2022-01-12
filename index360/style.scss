@@ -102,6 +102,7 @@ h6 {
 	}
 
    &:hover {
+		color: #6e6e6e;
       background-color: #c8c8c8;
       box-shadow: 0px 5px 40px 0 rgba(180, 180, 180, 0.8);
    }
@@ -277,6 +278,15 @@ h6 {
 				border-color: #ececec #ececec #f8f7f7;
 			}
 		}
+	}
+}
+.chart-wrapper {
+	@media (max-width: 650px) {
+		overflow-x: auto;
+	}
+
+	&__body {
+		min-width: 600px;
 	}
 }
 .indicators {
@@ -546,13 +556,4 @@ h6 {
 	text-align: left;
 	background-color: #ececec;
 	box-shadow: 0px 5px 40px rgba(180, 180, 180, 0.79);
-}
-.chart-wrapper {
-	@media (max-width: 650px) {
-		overflow-x: auto;
-	}
-
-	&__body {
-		min-width: 600px;
-	}
 }

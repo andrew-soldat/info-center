@@ -115,6 +115,7 @@ h6 {
   color: #6E6E6E;
 }
 .button:hover {
+  color: #6e6e6e;
   background-color: #c8c8c8;
   box-shadow: 0px 5px 40px 0 rgba(180, 180, 180, 0.8);
 }
@@ -288,6 +289,15 @@ h6 {
 }
 .nav-tab-chart_white .nav-tab-chart__link.active {
   border-color: #ececec #ececec #f8f7f7;
+}
+
+@media (max-width: 650px) {
+  .chart-wrapper {
+    overflow-x: auto;
+  }
+}
+.chart-wrapper__body {
+  min-width: 600px;
 }
 
 .indicators {
@@ -556,13 +566,4 @@ h6 {
   text-align: left;
   background-color: #ececec;
   box-shadow: 0px 5px 40px rgba(180, 180, 180, 0.79);
-}
-
-@media (max-width: 650px) {
-  .chart-wrapper {
-    overflow-x: auto;
-  }
-}
-.chart-wrapper__body {
-  min-width: 600px;
 }
