@@ -132,6 +132,8 @@
    }
 })();
 
+const linksTab = document.querySelectorAll(".nav-tab-chart__link")
+
 let countData = {};
 const request = new XMLHttpRequest();
 request.open('GET', './countdata.json');
@@ -300,6 +302,13 @@ function getData(data) {
    let chart4 = new ApexCharts(document.getElementById('myChart4'), options4);
    chart4.render();
 }
+
+// linksTab.forEach(element => {
+// 	element.addEventListener('shown.bs.tab', function (event) {
+// 		console.log('fxbgbxz ыкерчкере serg');
+		
+// 	})
+// });
 
 $(function () {
    $("a[href^='#']").click(function (event) {
