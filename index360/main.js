@@ -132,184 +132,6 @@
    }
 })();
 
-const linksTab = document.querySelectorAll(".nav-tab-chart__link")
-
-let countData = {};
-const request = new XMLHttpRequest();
-request.open('GET', './countdata.json');
-request.send();
-request.onload = () => {
-   countData = JSON.parse(request.response);
-   getData(countData);
-};
-
-function getData(data) {
-   // const numberOfChecks = document.getElementById('numberOfChecks');
-   // numberOfChecks.innerHTML = countData.relationToLastWeekIndexNumberOfChecks;
-
-   // const amountOfSales = document.getElementById('amountOfSales');
-   // amountOfSales.innerHTML = countData.relationToLastWeekIndexAmountOfSales;
-
-   let options1 = {
-      series: [
-         {
-            name: 'Индекс розничного бизнеса (кол-во чеков), 2021',
-            data: countData.indexNumberOfChecks,
-         },
-         {
-            name: 'Индекс розничного бизнеса (кол-во чеков), 2022',
-            data: countData.indexNumberOfChecks2022,
-         },
-      ],
-      chart: {
-         height: 350,
-         type: 'area',
-         zoom: {
-            enabled: false,
-         },
-      },
-      dataLabels: {
-         enabled: false,
-      },
-      xaxis: {
-         categories: countData.weekYear,
-      },
-      legend: {
-         position: 'top',
-      },
-      // colors: [ "#30AA4B", "#E8464F" ]
-   };
-
-	let options2 = {
-		series: [
-			{
-				name: 'Индекс розничного бизнеса (по сумме продаж), 2021',
-				data: countData.indexAmountOfSales,
-			},
-			{
-				name: 'Индекс розничного бизнеса (по сумме продаж), 2022',
-				data: countData.indexAmountOfSales2022,
-			},
-		],
-		chart: {
-			height: 350,
-			type: 'area',
-			zoom: {
-				enabled: false,
-			},
-		},
-		dataLabels: {
-			enabled: false,
-		},
-		xaxis: {
-			categories: countData.weekYear,
-		},
-		legend: {
-			position: 'top',
-		},
-		// colors: [ "#30AA4B", "#E8464F" ]
-	};
-
-   let options3 = {
-      series: [
-         {
-            name: 'Доля наличных, 2021',
-            data: countData.shareOfCash,
-         },
-         {
-				name: 'Доля безналичных, 2021',
-            data: countData.shareOfNonCash,
-         },
-      ],
-      chart: {
-         type: 'bar',
-         height: 350,
-         stacked: true,
-         stackType: '100%',
-      },
-      responsive: [
-         {
-            breakpoint: 480,
-            options: {
-               legend: {
-                  position: 'bottom',
-                  offsetX: -10,
-                  offsetY: 0,
-               },
-            },
-         },
-      ],
-      xaxis: {
-         categories: countData.weekYear,
-      },
-      fill: {
-         opacity: 1,
-      },
-      legend: {
-         position: 'top',
-      },
-      // colors: ["#466EB6", "#353746"]
-   };
-
-   let options4 = {
-      series: [
-         {
-            
-				name: 'Доля наличных, 2022',
-				data: countData.shareOfCash2022,
-         },
-         {
-            name: 'Доля безналичных, 2022',
-            data: countData.shareOfNonCash2022,
-         },
-      ],
-      chart: {
-         type: 'bar',
-         height: 350,
-         stacked: true,
-         stackType: '100%',
-      },
-      responsive: [
-         {
-            breakpoint: 480,
-            options: {
-               legend: {
-                  position: 'bottom',
-                  offsetX: -10,
-                  offsetY: 0,
-               },
-            },
-         },
-      ],
-      xaxis: {
-         categories: countData.weekYear2022,
-      },
-      fill: {
-         opacity: 1,
-      },
-      legend: {
-         position: 'top',
-      },
-      // colors: ["#466EB6", "#353746"]
-   };
-	
-   let chart1 = new ApexCharts(document.getElementById('myChart1'), options1);
-   chart1.render();
-   let chart2 = new ApexCharts(document.getElementById('myChart2'), options2);
-   chart2.render();
-   let chart3 = new ApexCharts(document.getElementById('myChart3'), options3);
-   chart3.render();
-   let chart4 = new ApexCharts(document.getElementById('myChart4'), options4);
-   chart4.render();
-}
-
-// linksTab.forEach(element => {
-// 	element.addEventListener('shown.bs.tab', function (event) {
-// 		console.log('fxbgbxz ыкерчкере serg');
-		
-// 	})
-// });
-
 $(function () {
    $("a[href^='#']").click(function (event) {
       var target = $(this).attr('href');
@@ -393,6 +215,122 @@ document.addEventListener('DOMContentLoaded', function () {
 var tooltipTriggerList = [].slice.call(
    document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
+
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
    return new bootstrap.Tooltip(tooltipTriggerEl);
 });
+
+function renderChart (objOptions, idChart){
+   let dataJson = {};
+   const request = new XMLHttpRequest();
+   request.open('GET', objOptions.series);
+   request.send();
+   request.onload = () => {
+      dataJson = JSON.parse(request.response);
+      objOptions.series = dataJson.series;
+      objOptions.xaxis.categories = dataJson.categories
+      new ApexCharts(document.getElementById(idChart), objOptions).render();
+   }
+}
+renderChart({
+   series: './json/numberOfChecks.json',
+   chart: {
+      height: 350,
+      type: 'area',
+      zoom: {
+         enabled: false,
+      },
+   },
+   dataLabels: {
+      enabled: false,
+   },
+   xaxis: {
+      categories: {},
+   },
+   legend: {
+      position: 'top',
+   },
+   // colors: [ "#30AA4B", "#E8464F" ]
+}, 'myChart1')
+renderChart({
+   series: './json/amountOfSales.json',
+   chart: {
+      height: 350,
+      type: 'area',
+      zoom: {
+         enabled: false,
+      },
+   },
+   dataLabels: {
+      enabled: false,
+   },
+   xaxis: {
+      categories: {},
+   },
+   legend: {
+      position: 'top',
+   },
+   // colors: [ "#30AA4B", "#E8464F" ]
+}, 'myChart2')
+renderChart({
+   series: './json/cash-nonCash-2021.json',
+   chart: {
+      type: 'bar',
+      height: 350,
+      stacked: true,
+      stackType: '100%',
+   },
+   responsive: [
+      {
+         breakpoint: 480,
+         options: {
+            legend: {
+               position: 'bottom',
+               offsetX: -10,
+               offsetY: 0,
+            },
+         },
+      },
+   ],
+   xaxis: {
+      categories: {},
+   },
+   fill: {
+      opacity: 1,
+   },
+   legend: {
+      position: 'top',
+   },
+   // colors: ["#466EB6", "#353746"]
+}, 'myChart3')
+renderChart({
+   series: './json/cash-nonCash-2022.json',
+   chart: {
+      type: 'bar',
+      height: 350,
+      stacked: true,
+      stackType: '100%',
+   },
+   responsive: [
+      {
+         breakpoint: 480,
+         options: {
+            legend: {
+               position: 'bottom',
+               offsetX: -10,
+               offsetY: 0,
+            },
+         },
+      },
+   ],
+   xaxis: {
+      categories: {},
+   },
+   fill: {
+      opacity: 1,
+   },
+   legend: {
+      position: 'top',
+   },
+   // colors: ["#466EB6", "#353746"]
+}, 'myChart4')
